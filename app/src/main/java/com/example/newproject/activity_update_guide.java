@@ -12,26 +12,26 @@ import android.widget.SearchView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+public class activity_update_guide extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-    MainAdapter mainadapter;
+    RecyclerView recyclerView1;
+    UpdateAdapter mainadapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_update_guide);
 
-        recyclerView = (RecyclerView)findViewById(R.id.rv);
+        recyclerView1 = (RecyclerView)findViewById(R.id.rv1);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView1.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<Guide> options =
                 new FirebaseRecyclerOptions.Builder<Guide>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Guide"), Guide.class)
                         .build();
 
-        mainadapter = new MainAdapter(options);
-        recyclerView.setAdapter(mainadapter);
+        mainadapter = new UpdateAdapter(options);
+        recyclerView1.setAdapter(mainadapter);
     }
 
     @Override
@@ -75,8 +75,10 @@ public class MainActivity extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Guide").orderByChild("name").startAt(str).endAt(str+"~"), Guide.class)
                         .build();
 
-        mainadapter = new MainAdapter(options);
+        mainadapter = new UpdateAdapter(options);
         mainadapter.startListening();
-        recyclerView.setAdapter(mainadapter);
+        recyclerView1.setAdapter(mainadapter);
     }
+
+
 }

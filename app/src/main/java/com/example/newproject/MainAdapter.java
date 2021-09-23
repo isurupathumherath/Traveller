@@ -3,6 +3,7 @@ package com.example.newproject;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.ViewHolder;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -51,6 +54,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Guide, MainAdapter.myVi
         CircleImageView img;
         TextView name, contact, email, type;
 
+
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -59,6 +63,9 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Guide, MainAdapter.myVi
             contact = (TextView)itemView.findViewById(R.id.contacttext);
             email = (TextView)itemView.findViewById(R.id.emailtext);
             type = (TextView)itemView.findViewById(R.id.typetext);
+
+
         }
+
     }
 }
