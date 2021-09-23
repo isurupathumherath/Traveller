@@ -6,27 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".activity_tourist_registration">
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="92dp"
-        android:layout_height="93dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView7"-->
+<!--        android:layout_width="92dp"-->
+<!--        android:layout_height="93dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.501"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/user" />-->
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="129dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/circle" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView6"-->
+<!--        android:layout_width="129dp"-->
+<!--        android:layout_height="116dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.503"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/circle" />-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
@@ -122,14 +122,14 @@
         android:id="@+id/regsubmit"
         android:layout_width="241dp"
         android:layout_height="62dp"
-        android:layout_marginTop="8dp"
+        android:layout_below="@+id/image1"
+        android:layout_marginTop="32dp"
         android:onClick="registerTourist"
         android:text="Submit"
         android:textColor="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+        app:layout_constraintTop_toBottomOf="@+id/image1" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
@@ -221,11 +221,12 @@
 
     </androidx.cardview.widget.CardView>
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/image1"
         android:layout_width="325dp"
         android:layout_height="106dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -265,7 +266,6 @@
             android:textColorHint="#0C0C0C" />
 
     </androidx.cardview.widget.CardView>
-
 
     <ImageView
         android:id="@+id/imageView15"
