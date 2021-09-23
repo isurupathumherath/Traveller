@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_tourist_registration">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="92dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="129dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="325dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="48dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="160dp"
+            app:srcCompat="@drawable/tour" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/reg_page_label_type"
+            android:textColor="#090808"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/regtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="@string/reg_page_tourist_type"
+            android:inputType="textPersonName"
+            android:textColor="#0C0B0B"
+            android:textColorHint="#0C0C0C" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="325dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/silver"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="48dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="160dp"
+            app:srcCompat="@drawable/cell" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/reg_page_label_contact"
+            android:textColor="#090808"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/regcontact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="@string/reg_page_tourist_contact"
+            android:inputType="textPersonName"
+            android:textColor="#0C0B0B"
+            android:textColorHint="#0C0C0C" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/regsubmit"
+        android:layout_width="241dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:onClick="registerTourist"
+        android:text="Submit"
+        android:textColor="#F8F8F8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="325dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/silver"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="48dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="160dp"
+            app:srcCompat="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/reg_page_label_name"
+            android:textColor="#090808"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/regemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="@string/reg_page_tourist_email"
+            android:inputType="textPersonName"
+            android:textColor="#0C0B0B"
+            android:textColorHint="#0C0C0C" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="325dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/silver"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="48dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="160dp"
+            app:srcCompat="@drawable/boy" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/reg_page_label_name"
+            android:textColor="#090808"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/regname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="@string/reg_page_nameField"
+            android:inputType="textPersonName"
+            android:textColor="#0C0B0B"
+            android:textColorHint="#0C0C0C" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image1"
+        android:layout_width="325dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/silver"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+        <ImageView
+            android:id="@+id/images1"
+            android:layout_width="48dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="160dp"
+            app:srcCompat="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/reg_page_label_name"
+            android:textColor="#090808"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/imgtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="@string/reg_page_tourist_email"
+            android:inputType="textPersonName"
+            android:textColor="#0C0B0B"
+            android:textColorHint="#0C0C0C" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="33dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/previous" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
