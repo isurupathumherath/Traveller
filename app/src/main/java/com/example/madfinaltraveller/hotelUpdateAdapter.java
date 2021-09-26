@@ -1,4 +1,4 @@
-package com.example.newproject;
+package com.example.madfinaltraveller;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;

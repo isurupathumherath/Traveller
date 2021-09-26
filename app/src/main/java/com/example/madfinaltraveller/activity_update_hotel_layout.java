@@ -1,30 +1,25 @@
-package com.example.newproject;
+package com.example.madfinaltraveller;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.SearchView;
-import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class activity_show_hotel extends AppCompatActivity {
+public class activity_update_hotel_layout extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    MainAdapterHotel mainAdapterHotel;
+    hotelUpdateAdapter hotelUpdateAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_hotel);
+        setContentView(R.layout.activity_update_hotel_layout);
 
-        recyclerView = (RecyclerView)findViewById(R.id.rvAllHotel);
+        recyclerView = (RecyclerView)findViewById(R.id.rvUpdateHotel);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -34,20 +29,21 @@ public class activity_show_hotel extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Hotel"), Hotel.class)
                         .build();
 
-        mainAdapterHotel = new MainAdapterHotel(options);
-        recyclerView.setAdapter(mainAdapterHotel);
+        hotelUpdateAdapter = new hotelUpdateAdapter(options);
+        recyclerView.setAdapter(hotelUpdateAdapter);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        mainAdapterHotel.startListening();
+        hotelUpdateAdapter.startListening();
+
     }
 
 
     @Override
     protected void onStop() {
         super.onStop();
-        mainAdapterHotel.stopListening();
+        hotelUpdateAdapter.stopListening();
     }
 }

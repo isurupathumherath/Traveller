@@ -1,14 +1,14 @@
-package com.example.newproject;
+package com.example.madfinaltraveller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class activity_mian_item_hotel extends AppCompatActivity {
+public class activity_hotel_update_popup extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mian_item_hotel);
+        setContentView(R.layout.activity_hotel_update_popup);
     }
 }

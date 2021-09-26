@@ -1,4 +1,4 @@
-package com.example.newproject;
+package com.example.madfinaltraveller;
 
 import org.junit.Test;
 

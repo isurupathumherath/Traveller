@@ -1,4 +1,4 @@
-package com.example.newproject;
+package com.example.madfinaltraveller;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,17 +9,17 @@ import android.os.Bundle;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class activity_update_hotel_layout extends AppCompatActivity {
+public class activity_show_hotel extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    hotelUpdateAdapter hotelUpdateAdapter;
+    MainAdapterHotel mainAdapterHotel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_hotel_layout);
+        setContentView(R.layout.activity_show_hotel);
 
-        recyclerView = (RecyclerView)findViewById(R.id.rvUpdateHotel);
+        recyclerView = (RecyclerView)findViewById(R.id.rvAllHotel);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -29,21 +29,20 @@ public class activity_update_hotel_layout extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Hotel"), Hotel.class)
                         .build();
 
-        hotelUpdateAdapter = new hotelUpdateAdapter(options);
-        recyclerView.setAdapter(hotelUpdateAdapter);
+        mainAdapterHotel = new MainAdapterHotel(options);
+        recyclerView.setAdapter(mainAdapterHotel);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        hotelUpdateAdapter.startListening();
-
+        mainAdapterHotel.startListening();
     }
 
 
     @Override
     protected void onStop() {
         super.onStop();
-        hotelUpdateAdapter.stopListening();
+        mainAdapterHotel.stopListening();
     }
 }
