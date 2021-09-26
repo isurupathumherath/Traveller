@@ -1,0 +1,197 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.madfinaltraveller"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="17"
+8-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+11-->[com.firebaseui:firebase-ui-database:8.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/4eb417843d69b927295683ce8d3f6c89/transformed/jetified-firebase-ui-database-8.0.0/AndroidManifest.xml:9:5-67
+11-->[com.firebaseui:firebase-ui-database:8.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/4eb417843d69b927295683ce8d3f6c89/transformed/jetified-firebase-ui-database-8.0.0/AndroidManifest.xml:9:22-64
+12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-database:20.0.2] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:25:5-79
+13-->[com.google.firebase:firebase-database:20.0.2] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:25:22-76
+14
+15    <application
+15-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:5:5-87:19
+16        android:name="androidx.multidex.MultiDexApplication"
+17        android:allowBackup="true"
+17-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:6:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.5.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/1c82df0e58fbd0ba966b0ae0d34659c1/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:7:9-43
+21        android:label="@string/app_name"
+21-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:8:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:9:9-54
+23        android:supportsRtl="true"
+23-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:10:9-35
+24        android:testOnly="true"
+25        android:theme="@style/Theme.MADFinalTraveller" >
+25-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:11:9-55
+26        <activity
+26-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:12:9-15:20
+27            android:name="com.example.madfinaltraveller.activity_register2"
+27-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:13:13-47
+28            android:exported="true" >
+28-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:14:13-36
+29        </activity>
+30        <activity
+30-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:16:9-18:39
+31            android:name="com.example.madfinaltraveller.deluser"
+31-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:17:13-36
+32            android:exported="true" />
+32-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:18:13-36
+33        <activity
+33-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:19:9-21:39
+34            android:name="com.example.madfinaltraveller.StatPageAdmin"
+34-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:20:13-42
+35            android:exported="true" />
+35-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:21:13-36
+36        <activity
+36-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:22:9-24:39
+37            android:name="com.example.madfinaltraveller.Allusers"
+37-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:23:13-37
+38            android:exported="true" />
+38-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:24:13-36
+39        <activity
+39-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:26:9-29:20
+40            android:name="com.example.madfinaltraveller.Loginpage"
+40-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:27:13-38
+41            android:exported="true" >
+41-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:28:13-36
+42        </activity>
+43
+44        <!-- Added by chamodh -->
+45        <activity
+45-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:32:9-34:39
+46            android:name="com.example.madfinaltraveller.MainActivity"
+46-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:33:13-41
+47            android:exported="true" />
+47-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:34:13-36
+48        <activity
+48-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:36:9-41:20
+49            android:name="com.example.madfinaltraveller.activity_guide_review"
+49-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:37:13-50
+50            android:exported="true" >
+50-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:38:13-36
+51        </activity>
+52        <activity
+52-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:43:9-47:20
+53            android:name="com.example.madfinaltraveller.activity_tourist_registration"
+53-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:44:13-58
+54            android:exported="true" >
+54-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:45:13-36
+55        </activity>
+56        <activity
+56-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:50:9-54:20
+57            android:name="com.example.madfinaltraveller.activity_update_guide"
+57-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:51:13-50
+58            android:exported="true" >
+58-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:52:13-36
+59        </activity>
+60        <activity
+60-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:57:9-59:39
+61            android:name="com.example.madfinaltraveller.activity_hotel_update_popup"
+61-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:58:13-85
+62            android:exported="true" />
+62-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:59:13-36
+63        <activity
+63-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:60:9-63:20
+64            android:name="com.example.madfinaltraveller.activity_update_hotel_layout"
+64-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:61:13-86
+65            android:exported="true" >
+65-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:62:13-36
+66        </activity>
+67        <activity
+67-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:64:9-66:39
+68            android:name="com.example.madfinaltraveller.activity_update_hotel"
+68-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:65:13-79
+69            android:exported="true" />
+69-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:66:13-36
+70        <activity
+70-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:68:9-71:20
+71            android:name="com.example.madfinaltraveller.activity_register_hotel"
+71-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:69:13-81
+72            android:exported="true" >
+72-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:70:13-36
+73        </activity>
+74        <activity
+74-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:73:9-75:39
+75            android:name="com.example.madfinaltraveller.activity_mian_item_hotel"
+75-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:74:13-82
+76            android:exported="true" />
+76-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:75:13-36
+77        <activity
+77-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:76:9-84:20
+78            android:name="com.example.madfinaltraveller.activity_show_hotel"
+78-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:77:13-77
+79            android:exported="true" >
+79-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:78:13-36
+80            <intent-filter>
+80-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:79:13-83:29
+81                <action android:name="android.intent.action.MAIN" />
+81-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:80:17-69
+81-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:80:25-66
+82
+83                <category android:name="android.intent.category.LAUNCHER" />
+83-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:82:17-77
+83-->/Users/chamodhabeygoonawardana/Desktop/anupa/MADFinalTraveller/app/src/main/AndroidManifest.xml:82:27-74
+84            </intent-filter>
+85        </activity>
+86
+87        <service
+87-->[com.google.firebase:firebase-database:20.0.2] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:29:9-35:19
+88            android:name="com.google.firebase.components.ComponentDiscoveryService"
+88-->[com.google.firebase:firebase-database:20.0.2] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:30:13-84
+89            android:directBootAware="true"
+89-->[com.google.firebase:firebase-common:20.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+90            android:exported="false" >
+90-->[com.google.firebase:firebase-database:20.0.2] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:31:13-37
+91            <meta-data
+91-->[com.google.firebase:firebase-database:20.0.2] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:32:13-34:85
+92                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+92-->[com.google.firebase:firebase-database:20.0.2] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:33:17-109
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[com.google.firebase:firebase-database:20.0.2] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:34:17-82
+94        </service>
+95
+96        <provider
+96-->[com.google.firebase:firebase-common:20.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+97            android:name="com.google.firebase.provider.FirebaseInitProvider"
+97-->[com.google.firebase:firebase-common:20.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+98            android:authorities="com.example.madfinaltraveller.firebaseinitprovider"
+98-->[com.google.firebase:firebase-common:20.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+99            android:directBootAware="true"
+99-->[com.google.firebase:firebase-common:20.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+100            android:exported="false"
+100-->[com.google.firebase:firebase-common:20.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+101            android:initOrder="100" />
+101-->[com.google.firebase:firebase-common:20.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+102
+103        <activity
+103-->[com.google.android.gms:play-services-base:17.1.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/9917c1060ba2f79f3519a1b2bf642c2c/transformed/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+104            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+104-->[com.google.android.gms:play-services-base:17.1.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/9917c1060ba2f79f3519a1b2bf642c2c/transformed/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+105            android:exported="false"
+105-->[com.google.android.gms:play-services-base:17.1.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/9917c1060ba2f79f3519a1b2bf642c2c/transformed/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+106            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+106-->[com.google.android.gms:play-services-base:17.1.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/9917c1060ba2f79f3519a1b2bf642c2c/transformed/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+107
+108        <meta-data
+108-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/736795ced1125049463359fb87a935ed/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+109            android:name="com.google.android.gms.version"
+109-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/736795ced1125049463359fb87a935ed/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+110            android:value="@integer/google_play_services_version" />
+110-->[com.google.android.gms:play-services-basement:17.0.0] /Users/chamodhabeygoonawardana/.gradle/caches/transforms-3/736795ced1125049463359fb87a935ed/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+111    </application>
+112
+113</manifest>

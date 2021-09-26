@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.madfinaltraveller"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="31" />
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.MADFinalTraveller" >
+        <activity
+            android:name="com.example.madfinaltraveller.activity_register2"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.madfinaltraveller.deluser"
+            android:exported="true" />
+        <activity
+            android:name="com.example.madfinaltraveller.StatPageAdmin"
+            android:exported="true" />
+        <activity
+            android:name="com.example.madfinaltraveller.Allusers"
+            android:exported="true" />
+        <activity
+            android:name="com.example.madfinaltraveller.Loginpage"
+            android:exported="true" >
+        </activity>
+
+        <!-- Added by chamodh -->
+        <activity
+            android:name="com.example.madfinaltraveller.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.madfinaltraveller.activity_guide_review"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.madfinaltraveller.activity_tourist_registration"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.madfinaltraveller.activity_update_guide"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.madfinaltraveller.activity_hotel_update_popup"
+            android:exported="true" />
+        <activity
+            android:name="com.example.madfinaltraveller.activity_update_hotel_layout"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.madfinaltraveller.activity_update_hotel"
+            android:exported="true" />
+        <activity
+            android:name="com.example.madfinaltraveller.activity_register_hotel"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.madfinaltraveller.activity_mian_item_hotel"
+            android:exported="true" />
+        <activity
+            android:name="com.example.madfinaltraveller.activity_show_hotel"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.example.madfinaltraveller.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
