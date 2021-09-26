@@ -1,17 +1,9 @@
 <resources>
     <string name="app_name">Traveller</string>
-    <string name="col1">Name</string>
-    <string name="col2">ID</string>
-    <string name="col3">Actions</string>
-    <string name="row1name">xxxxxx</string>
-    <string name="row1id">xxxxxx</string>
-    <string name="row1action">Delete</string>
-    <string name="title">Traveller</string>
-    <string name="user">User Name</string>
-    <string name="email">E-Mail</string>
-    <string name="Gen">Gender</string>
-    <string name="DOB">Date of Birth</string>
+    <string name="Email">Email</string>
+    <string name="Username">Username</string>
     <string name="password">Password</string>
+
     <string name="retypePW">Re-Type Password</string>
     <string name="reg">Register</string>
     <string name="clear">Clear</string>
@@ -89,5 +81,11 @@
     <string name="showAllHotels">All Hotels </string>
     <string name="addHotel">Add Hotel</string>
     <string name="activityAllHotel">All Hotels</string>
+
+    <string name="Reg">Register</string>
+    <string name="Reset">Clear</string>
+    <string name="Login">Login</string>
+    <string name="u_country">Country</string>
+
     <string name="updateHotel">Update Hotel</string>
 </resources>
