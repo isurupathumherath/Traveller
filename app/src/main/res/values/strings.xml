@@ -67,4 +67,7 @@
     <string name="admin_guide_page_header_type">Email</string>
     <string name="admin_guide_page_header_email">Type</string>
     <string name="admin_guide_page_header_actions">Actions</string>
+    <string name="rev_btn">Submit</string>review
+    <string name="review">Enter review here</string>
+    <string name="AllGuide">All Guides</string>
 </resources>
