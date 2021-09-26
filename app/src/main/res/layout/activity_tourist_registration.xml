@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_tourist_registration">
+    tools:context=".activity_tourist_registration"
+    android:background="@color/white">
 
 <!--    <ImageView-->
 <!--        android:id="@+id/imageView7"-->
@@ -30,10 +31,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
-        android:layout_width="325dp"
-        android:layout_height="106dp"
+        android:layout_width="320dp"
+        android:layout_height="96dp"
         android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,11 +42,12 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="48dp"
-            android:layout_height="53dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="160dp"
+            android:scrollbarSize="3dp"
             app:srcCompat="@drawable/tour" />
 
         <TextView
@@ -67,7 +69,7 @@
             android:layout_marginTop="50dp"
             android:ems="10"
             android:hint="@string/reg_page_tourist_type"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textColor="#0C0B0B"
             android:textColorHint="#0C0C0C" />
 
@@ -75,9 +77,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
-        android:layout_width="325dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="320dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,11 +88,12 @@
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="48dp"
-            android:layout_height="53dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="160dp"
+            android:scrollbarSize="3dp"
             app:srcCompat="@drawable/cell" />
 
         <TextView
@@ -123,7 +126,7 @@
         android:layout_width="241dp"
         android:layout_height="62dp"
         android:layout_below="@+id/image1"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:onClick="registerTourist"
         android:text="Submit"
         android:textColor="#F8F8F8"
@@ -133,9 +136,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
-        android:layout_width="325dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="320dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,11 +147,12 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="48dp"
-            android:layout_height="53dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="160dp"
+            android:scrollbarSize="3dp"
             app:srcCompat="@drawable/mail" />
 
         <TextView
@@ -176,24 +180,27 @@
 
     </androidx.cardview.widget.CardView>
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="325dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="320dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="12dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+        app:layout_constraintTop_toBottomOf="@+id/addHotel">
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="48dp"
-            android:layout_height="53dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="160dp"
+            android:scrollbarSize="3dp"
             app:srcCompat="@drawable/boy" />
 
         <TextView
@@ -221,12 +228,11 @@
 
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/image1"
-        android:layout_width="325dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="320dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -235,11 +241,12 @@
 
         <ImageView
             android:id="@+id/images1"
-            android:layout_width="48dp"
-            android:layout_height="53dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="160dp"
+            android:scrollbarSize="3dp"
             app:srcCompat="@drawable/mail" />
 
         <TextView
@@ -271,9 +278,25 @@
         android:id="@+id/imageView15"
         android:layout_width="33dp"
         android:layout_height="45dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/previous" />
+
+    <TextView
+        android:id="@+id/addHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Add Guides"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

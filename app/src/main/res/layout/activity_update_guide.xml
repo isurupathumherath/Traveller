@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_update_guide">
+    tools:context=".activity_update_guide"
+    android:background="@color/white">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv1"
-        android:layout_width="340dp"
-        android:layout_height="610dp"
+        android:layout_width="324dp"
+        android:layout_height="601dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
