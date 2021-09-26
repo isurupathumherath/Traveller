@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_admin_home_direct.xml" value="0.25416666666666665" />
+        <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_card1.xml" value="0.2" />
+        <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_guide_review.xml" value="0.25416666666666665" />
         <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_main.xml" value="0.21510416666666668" />
         <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_register_hotel.xml" value="0.25416666666666665" />
         <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_show_hotel.xml" value="0.264" />
