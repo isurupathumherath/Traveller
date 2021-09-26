@@ -11,18 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewProject">
+
+        <activity
+            android:name=".activity_update_hotel_layout"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity_update_hotel"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".activity_mian_item_hotel"
-            android:exported="true" >
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity_show_hotel"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".activity_register_hotel"
             android:exported="true" />
