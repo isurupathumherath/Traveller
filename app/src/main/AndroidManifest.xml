@@ -10,6 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< Updated upstream
         android:theme="@style/Theme.NewProject">
         <activity
             android:name=".activity_update_guide"
@@ -19,13 +20,27 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+=======
+        android:theme="@style/Theme.MADFinalTraveller">
+        <activity
+            android:name=".activity_register2"
+            android:exported="true" >
+>>>>>>> Stashed changes
         </activity>
 
         <activity
+<<<<<<< Updated upstream
             android:name=".loginpage"
             android:exported="true">
 
         </activity>
+=======
+            android:name=".deluser"
+            android:exported="true" />
+        <activity
+            android:name=".StatPageAdmin"
+            android:exported="true" />
+>>>>>>> Stashed changes
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -48,10 +63,42 @@
 
         <activity android:name=".AdminHome"
             android:exported="true">
+<<<<<<< Updated upstream
+=======
+        </activity>
+
+<!--        Added by chamodh-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".activity_guide_review"
+            android:exported="true" >
+
 
         </activity>
 
+        <activity
+            android:name=".activity_tourist_registration"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> Stashed changes
+
+        </activity>
+
+<<<<<<< Updated upstream
         <activity android:name=".homepageClient" />
+=======
+
+        <activity
+            android:name=".activity_update_guide"
+            android:exported="true">
+
+        </activity>
+
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

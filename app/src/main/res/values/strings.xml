@@ -12,6 +12,24 @@
     <string name="Gen">Gender</string>
     <string name="DOB">Date of Birth</string>
     <string name="password">Password</string>
+<<<<<<< Updated upstream
+=======
+    <string name="Reg">Register</string>
+    <string name="Reset">Clear</string>
+    <string name="Login">Login</string>
+    <string name="u_country">Country</string>
+    <string name="col1">Name</string>
+    <string name="col2">ID</string>
+    <string name="col3">Actions</string>
+    <string name="row1name">xxxxxx</string>
+    <string name="row1id">xxxxxx</string>
+    <string name="row1action">Delete</string>
+    <string name="title">Traveller</string>
+    <string name="user">User Name</string>
+    <string name="email">E-Mail</string>
+    <string name="Gen">Gender</string>
+    <string name="DOB">Date of Birth</string>
+>>>>>>> Stashed changes
     <string name="retypePW">Re-Type Password</string>
     <string name="reg">Register</string>
     <string name="clear">Clear</string>
@@ -32,27 +50,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string-array name="countries_array">
-        <item>Sri lanka</item>
-        <item>India</item>
-        <item>australia</item>
-        <item>Newzealand</item>
-        <item>USA</item>
-        <item>Russia</item>
-        <item>Japan</item>
-        <item>England</item>
-    </string-array>
-    <string name="title_activity_register">Register</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
-
     <string name="reg_page_nameField">Enter Guide Name</string>
     <string name="reg_page_tourist_email">Enter Email</string>
     <string name="reg_page_tourist_contact">Enter contact number</string>
@@ -67,4 +64,10 @@
     <string name="admin_guide_page_header_type">Email</string>
     <string name="admin_guide_page_header_email">Type</string>
     <string name="admin_guide_page_header_actions">Actions</string>
+<<<<<<< Updated upstream
+=======
+    <string name="rev_btn">Submit</string>review
+    <string name="review">Enter review here</string>
+    <string name="AllGuide">All Guides</string>
+>>>>>>> Stashed changes
 </resources>

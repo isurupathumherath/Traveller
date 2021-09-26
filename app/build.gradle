@@ -12,6 +12,7 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,7 +30,10 @@ android {
 }
 
 dependencies {
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
@@ -42,6 +46,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
+<<<<<<< Updated upstream
+=======
+
+    implementation 'com.android.support:multidex:1.0.3'
+>>>>>>> Stashed changes
     implementation 'com.firebaseui:firebase-ui-database:8.0.0'
 
     //Glide
@@ -63,7 +72,11 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+<<<<<<< Updated upstream
 }
 
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.android.application'
+=======
+}
+>>>>>>> Stashed changes
