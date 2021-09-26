@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/guide"/>
+        <item
+            android:id="@+id/nav_car"
+            android:title="Home"
+            android:icon="@drawable/guide"/>
+        <item
+            android:id="@+id/nav_plane"
+            android:title="Home"
+            android:icon="@drawable/guide"/>
+        <item
+            android:id="@+id/nav_bus"
+            android:title="Home"
+            android:icon="@drawable/guide"/>
+        <item
+            android:id="@+id/nav_me"
+            android:title="Home"
+            android:icon="@drawable/guide"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Profile">
+            <menu>
+                <item
+                    android:id="@+id/login"
+                    android:title="Home"
+                    android:icon="@drawable/guide"/>
+                <item
+                    android:id="@+id/profile"
+                    android:title="Home"
+                    android:icon="@drawable/guide"/>
+                <item
+                    android:id="@+id/logout"
+                    android:title="Home"
+                    android:icon="@drawable/guide"/>
+            </menu>
+        </item>
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_home2"
+                android:title="Home"
+                android:icon="@drawable/guide"/>
+            <item
+                android:id="@+id/nav_car2"
+                android:title="Home"
+                android:icon="@drawable/guide"/>
+        </menu>
+    </item>
+</menu>
