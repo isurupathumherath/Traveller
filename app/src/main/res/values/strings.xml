@@ -89,4 +89,5 @@
     <string name="showAllHotels">All Hotels </string>
     <string name="addHotel">Add Hotel</string>
     <string name="activityAllHotel">All Hotels</string>
+    <string name="updateHotel">Update Hotel</string>
 </resources>
