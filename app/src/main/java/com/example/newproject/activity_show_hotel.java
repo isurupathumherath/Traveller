@@ -4,11 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -16,19 +14,19 @@ import android.widget.TextView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+public class activity_show_hotel extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    MainAdapter mainadapter;
+    MainAdapterHotel mainAdapterHotel;
     Button addComment, viewComments;
     TextView tv ;
-    String stringname;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_show_hotel);
 
-        recyclerView = (RecyclerView)findViewById(R.id.rv);
+        recyclerView = (RecyclerView)findViewById(R.id.rvAllHotel);
         addComment = (Button)findViewById(R.id.btnaddcomment);
         viewComments = (Button)findViewById(R.id.btnseecomment);
         tv = (TextView)findViewById(R.id.nametext);
@@ -36,32 +34,19 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-        FirebaseRecyclerOptions<Guide> options =
-                new FirebaseRecyclerOptions.Builder<Guide>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Guide"), Guide.class)
+        FirebaseRecyclerOptions<Hotel> options =
+                new FirebaseRecyclerOptions.Builder<Hotel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Hotel"), Hotel.class)
                         .build();
 
-        mainadapter = new MainAdapter(options);
-        recyclerView.setAdapter(mainadapter);
-
-//        addComment.setOnClickListener(new View.OnClickListener(){
-//            public void onClick(View v){
-//                startActivity(new Intent(getApplicationContext(),activity_guide_review.class));
-//            }
-//        });
+        mainAdapterHotel = new MainAdapterHotel(options);
+        recyclerView.setAdapter(mainAdapterHotel);
     }
-
-//    public void change_page(View v){
-////        stringname = tv.getText().toString();
-//        Intent intent = new Intent(this,activity_guide_review.class);
-//        intent.putExtra("name", "thisthis");
-//        startActivity(intent);
-//    }
 
     @Override
     protected void onStart() {
         super.onStart();
-        mainadapter.startListening();
+        mainAdapterHotel.startListening();
 
     }
 
@@ -69,10 +54,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        mainadapter.stopListening();
+        mainAdapterHotel.stopListening();
     }
-
-
 
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -97,18 +80,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void txtSearch(String str){
-        FirebaseRecyclerOptions<Guide> options =
-                new FirebaseRecyclerOptions.Builder<Guide>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Guide").orderByChild("name").startAt(str).endAt(str+"~"), Guide.class)
+        FirebaseRecyclerOptions<Hotel> options =
+                new FirebaseRecyclerOptions.Builder<Hotel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Hotel").orderByChild("name").startAt(str).endAt(str+"~"), Hotel.class)
                         .build();
 
-        mainadapter = new MainAdapter(options);
-        mainadapter.startListening();
-        recyclerView.setAdapter(mainadapter);
+        mainAdapterHotel = new MainAdapterHotel(options);
+        mainAdapterHotel.startListening();
+        recyclerView.setAdapter(mainAdapterHotel);
     }
-
-
-
-
-
 }

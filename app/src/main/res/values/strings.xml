@@ -67,4 +67,26 @@
     <string name="admin_guide_page_header_type">Email</string>
     <string name="admin_guide_page_header_email">Type</string>
     <string name="admin_guide_page_header_actions">Actions</string>
+    <string name="rev_btn">Submit</string>review
+    <string name="review">Enter review here</string>
+    <string name="AllGuide">All Guides</string>
+
+    <string name="createHotelName">Hotel Name</string>
+    <string name="createHotelNameTest">Enter Hotel Name</string>
+    <string name="createHotelType">Hotel Type</string>
+    <string name="createHotelAddressTest">Enter Hotel Address</string>
+    <string name="createHotelCity"> City/Town </string>
+    <string name="createHotelProvince">Province</string>
+    <string name="createHotelDistrict">District</string>
+    <string name="createHotelLocationTag">Location Tag</string>
+    <string name="createHotelLocationTagTest">Enter Location Tag URL</string>
+    <string name="createHotelService">Services</string>
+    <string name="createHotelServiceText">Enter Hotel Services</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="btnSave">Save</string>
+    <string name="createHotelAddress">HotelAddress</string>
+    <string name="editHotelAddress">Hotel Address</string>
+    <string name="showAllHotels">All Hotels </string>
+    <string name="addHotel">Add Hotel</string>
+    <string name="activityAllHotel">All Hotels</string>
 </resources>
