@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_admin_home_direct.xml" value="0.25416666666666665" />
         <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_card1.xml" value="0.2" />
         <entry key="..\:/Git/Traveller/app/src/main/res/layout/activity_guide_review.xml" value="0.25416666666666665" />
@@ -34,6 +35,12 @@
         <entry key="app/src/main/res/layout/update_guide.xml" value="0.4804411780046917" />
         <entry key="app/src/main/res/layout/update_popup.xml" value="0.165" />
         <entry key="app/src/main/res/menu/search.xml" value="0.2907692307692308" />
+=======
+        <entry key="..\:/MADFinalTraveller/app/src/main/res/layout/activity_adminhome.xml" value="0.25416666666666665" />
+        <entry key="..\:/MADFinalTraveller/app/src/main/res/layout/activity_allusers.xml" value="0.25416666666666665" />
+        <entry key="..\:/MADFinalTraveller/app/src/main/res/layout/activity_deluser.xml" value="0.25416666666666665" />
+        <entry key="..\:/MADFinalTraveller/app/src/main/res/layout/activity_loginpage.xml" value="0.25416666666666665" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
