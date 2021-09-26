@@ -88,4 +88,5 @@
     <string name="editHotelAddress">Hotel Address</string>
     <string name="showAllHotels">All Hotels </string>
     <string name="addHotel">Add Hotel</string>
+    <string name="activityAllHotel">All Hotels</string>
 </resources>
