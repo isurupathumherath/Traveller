@@ -1,6 +1,7 @@
 package com.example.newproject;
 
 import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -38,42 +39,28 @@ public class MainAdapterHotel extends FirebaseRecyclerAdapter<Hotel, MainAdapter
                 load(model.getImage()).
                 placeholder(R.drawable.common_google_signin_btn_icon_dark).circleCrop()
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal).into(holder.img);
-
-        holder.btnaddcommit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent i = new Intent(v.getContext(), activity_show_hotel.class);
-                i.putExtra("name", model.getName());
-                i.putExtra("image", model.getImage());
-                v.getContext().startActivity(i);
-
-
-            }
-        });
     }
 
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_mian_item_hotel, parent, false);
+        return new MainAdapterHotel.myViewHolder(view);
     }
 
     public class myViewHolder extends RecyclerView.ViewHolder{
 
         CircleImageView img;
         TextView name, type, address, city;
-        Button btnaddcommit;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            img = (CircleImageView)itemView.findViewById(R.id.image);
-            name = (TextView)itemView.findViewById(R.id.nametext);
-            address = (TextView)itemView.findViewById(R.id.contacttext);
-            type = (TextView)itemView.findViewById(R.id.emailtext);
-            city = (TextView)itemView.findViewById(R.id.typetext);
-            btnaddcommit = (Button)itemView.findViewById(R.id.btnaddcomment);
+            img = (CircleImageView)itemView.findViewById(R.id.imageHotel);
+            name = (TextView)itemView.findViewById(R.id.nameHotel);
+            address = (TextView)itemView.findViewById(R.id.hotelAddress);
+            type = (TextView)itemView.findViewById(R.id.hotelType);
+            city = (TextView)itemView.findViewById(R.id.hotelCity);
 
         }
     }

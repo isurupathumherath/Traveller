@@ -12,16 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewProject">
         <activity
-            android:name=".activity_show_hotel"
+            android:name=".activity_mian_item_hotel"
             android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity_show_hotel"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activity_register_hotel"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity_guide_review"
             android:exported="true" />
@@ -30,7 +34,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity_tourist_registration"
             android:exported="true" />
