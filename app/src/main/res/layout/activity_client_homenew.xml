@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientHomenew">
+
+    <Button
+        android:id="@+id/TaxiPg"
+        android:layout_width="322dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="60dp"
+        android:text="Taxi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Hotelpg"
+        android:layout_width="317dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="35dp"
+        android:text="Hotel"
+        android:onClick="showall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TaxiPg" />
+
+    <Button
+        android:id="@+id/Guidepg"
+        android:layout_width="317dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="41dp"
+        android:onClick="moveGuide"
+        android:text="Guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Hotelpg" />
+</androidx.constraintlayout.widget.ConstraintLayout>
