@@ -28,6 +28,11 @@
         <activity
             android:name=".Loginpage"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
 <!--        Added by chamodh-->
@@ -59,11 +64,7 @@
         <activity
             android:name="com.example.madfinaltraveller.activity_sample_landing_page"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
@@ -85,6 +86,13 @@
 
         <activity
             android:name="com.example.madfinaltraveller.activity_register_hotel"
+            android:exported="true" />
+
+        <activity
+            android:name=".ClientHomenew"
+            android:exported="true" />
+        <activity
+            android:name=".newAdminhome"
             android:exported="true" />
 
     </application>
