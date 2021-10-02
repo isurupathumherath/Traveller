@@ -36,7 +36,11 @@ public class specific_guide_review extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Reviews> options =
                 new FirebaseRecyclerOptions.Builder<Reviews>()
+<<<<<<< HEAD
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Reviews"), Reviews.class)
+=======
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Reviews").orderByChild("username").equalTo(str), Reviews.class)
+>>>>>>> 856eaaae4e0de787a427742ed236ffaa2f2fe2ed
                         .build();
 
         guide_adapter = new com.example.madfinaltraveller.specific_guide_adapter(options);

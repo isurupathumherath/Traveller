@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".ClientHomenew"
     android:fitsSystemWindows="true"
+<<<<<<< HEAD
+=======
+    android:background="@color/white"
+>>>>>>> 856eaaae4e0de787a427742ed236ffaa2f2fe2ed
     tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView

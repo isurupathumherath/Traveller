@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -18,3 +19,25 @@
         android:textSize="54dp"
         android:textColor="#FFFFFFFF"/>
 </LinearLayout>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@drawable/header2"
+        android:gravity="bottom"
+        android:padding="30dp">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Traveller"
+        app:fontFamily="cursive"
+        android:textSize="54dp"
+        android:textColor="#FFFFFFFF"/>
+</LinearLayout>
+>>>>>>> 856eaaae4e0de787a427742ed236ffaa2f2fe2ed

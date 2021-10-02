@@ -47,7 +47,6 @@ public class activity_guide_review extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Please enter a review", Toast.LENGTH_LONG).show();
         }else{
 
-//          Tourist newtourist = new Tourist(ed_regname.getText().toString().trim(), ed_regemail.getText().toString().trim(), Integer.parseInt(ed_regcontact.getText().toString().trim()), ed_regtype.getText().toString().trim() );
 
             newReview.setReview(review.getText().toString().trim());
             newReview.setUsername(getnames.getText().toString().trim());
