@@ -39,6 +39,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
         holder.uemail.setText(model.getEmail());
         holder.ucontact.setText(model.getContact());
         holder.utype.setText(model.getType());
+        holder.ucurrency.setText(model.getCurrency());
 
         Glide.with(holder.uimg.getContext()).
                 load(model.getImage()).
@@ -50,7 +51,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.uimg.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup))
-                        .setExpanded(true,1500)
+                        .setExpanded(true,1700)
                         .create();
 
                 View view = dialogPlus.getHolderView();
@@ -60,6 +61,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
                 EditText ucontact = view.findViewById(R.id.utxtcontact);
                 EditText uimage = view.findViewById(R.id.utxtimage);
                 EditText utype = view.findViewById(R.id.utxttype);
+                EditText ucurrency = view.findViewById(R.id.utxtcurrency);
 
                 Button btnUpdate = view.findViewById(R.id.btnUpdate);
 
@@ -68,6 +70,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
                 uimage.setText(model.getImage());
                 uemail.setText(model.getEmail());
                 utype.setText(model.getType());
+                ucurrency.setText(model.getCurrency());
 
                 dialogPlus.show();
 
@@ -80,6 +83,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
                         map.put("email", uemail.getText().toString());
                         map.put("image", uimage.getText().toString());
                         map.put("type", utype.getText().toString());
+                        map.put("currency", ucurrency.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("Guide")
                                 .child(getRef(position).getKey()).updateChildren(map)
@@ -141,7 +145,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
     class myViewHolder extends RecyclerView.ViewHolder{
 
         CircleImageView uimg;
-        TextView uname, ucontact, uemail, utype;
+        TextView uname, ucontact, uemail, utype, ucurrency;
 
         Button btnEdit, btnDelete;
 
@@ -153,6 +157,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
             ucontact = (TextView)itemView.findViewById(R.id.ucontacttext);
             uemail = (TextView)itemView.findViewById(R.id.uemailtext);
             utype = (TextView)itemView.findViewById(R.id.utypetext);
+            ucurrency = (TextView)itemView.findViewById(R.id.ucurrency);
 
             btnEdit = (Button)itemView.findViewById(R.id.btnEdit);
             btnDelete = (Button)itemView.findViewById(R.id.btnDelete);

@@ -10,9 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADFinalTraveller">
         <activity
-            android:name=".activity_register2"
+            android:name=".currency_change"
             android:exported="true" >
+
+
         </activity>
+        <activity
+            android:name=".home_admin"
+            android:exported="true"></activity>
+        <activity
+            android:name=".specific_guide_review"
+            android:exported="true" />
+        <activity
+            android:name=".activity_register2"
+            android:exported="true" />
         <activity
             android:name=".deluser"
             android:exported="true" />
@@ -23,40 +34,41 @@
             android:name=".Allusers"
             android:exported="true" />
         <activity
-            android:name=".Adminhome"
-            android:exported="true" />
-        <activity
             android:name=".Loginpage"
+<<<<<<< Updated upstream
             android:exported="true">
         </activity>
 
 <!--        Added by chamodh-->
+=======
+            android:exported="true"></activity> <!-- Added by chamodh -->
+>>>>>>> Stashed changes
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".activity_guide_review"
             android:exported="true" >
 
-
         </activity>
+        <activity
+            android:name=".activity_guide_review"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity_tourist_registration"
-            android:exported="true">
+            android:exported="true" >
 
-        </activity>
-
-
+        </activity>>
         <activity
             android:name=".activity_update_guide"
             android:exported="true">
 
         </activity>
-
-
         <activity
+<<<<<<< Updated upstream
             android:name="com.example.madfinaltraveller.activity_sample_landing_page"
             android:exported="true" >
             <intent-filter>
@@ -66,27 +78,46 @@
             </intent-filter>
         </activity>
 
+=======
+            android:name=".activity_sample_landing_page"
+            android:exported="true" />
+>>>>>>> Stashed changes
         <activity
-            android:name="com.example.madfinaltraveller.activity_hotel_update_popup"
+            android:name=".activity_hotel_update_popup"
             android:exported="true" />
         <activity
-            android:name="com.example.madfinaltraveller.activity_update_hotel_layout"
+            android:name=".activity_update_hotel_layout"
+            android:exported="true" />
+        <activity
+            android:name=".activity_update_hotel"
+            android:exported="true" />
+        <activity
+            android:name=".activity_mian_item_hotel"
+            android:exported="true" />
+        <activity
+            android:name=".activity_show_hotel"
+            android:exported="true" />
+        <activity
+            android:name=".activity_register_hotel"
+            android:exported="true" />
+<<<<<<< Updated upstream
+
+=======
+        <activity
+            android:name=".ClientHomenew"
+            android:exported="true"></activity>
+        <activity
+            android:name=".newAdminhome"
+            android:exported="true" />
+        <activity
+            android:name=".Add_taxi"
+            android:exported="true"></activity>
+        <activity
+            android:name=".activity_admin_taxi"
             android:exported="true">
+
         </activity>
-        <activity
-            android:name="com.example.madfinaltraveller.activity_update_hotel"
-            android:exported="true" />
-        <activity
-            android:name="com.example.madfinaltraveller.activity_mian_item_hotel"
-            android:exported="true" />
-        <activity
-            android:name="com.example.madfinaltraveller.activity_show_hotel"
-            android:exported="true" />
-
-        <activity
-            android:name="com.example.madfinaltraveller.activity_register_hotel"
-            android:exported="true" />
-
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

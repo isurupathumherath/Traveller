@@ -65,29 +65,51 @@
             android:text="Type"
             android:textColor="#000"
             android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/currencytext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typetext"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/img1"
+            android:text="Currency"
+            android:textColor="#000"
+            android:textSize="25sp" />
         <!--            android:layout_centerVerticle = "true"-->
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/typetext"
+            android:layout_width="384dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/currencytext"
+            android:layout_marginTop="-5dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnaddcomment"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="5dp"
-                android:text="Add comments"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:text="Add Comment"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btnseecomment"
-                android:layout_width="130dp"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:text="See Comment"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/btnseecurrency"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="See comments"
+                android:layout_marginLeft="2dp"
+                android:text="Change Currency"
                 android:textAllCaps="false" />
         </LinearLayout>
 

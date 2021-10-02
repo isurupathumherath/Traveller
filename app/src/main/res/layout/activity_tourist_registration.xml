@@ -32,7 +32,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
         android:layout_width="320dp"
-        android:layout_height="96dp"
+        android:layout_height="86dp"
         android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
@@ -68,6 +68,7 @@
             android:layout_marginLeft="80dp"
             android:layout_marginTop="50dp"
             android:ems="10"
+            android:textSize="15dp"
             android:hint="@string/reg_page_tourist_type"
             android:inputType="textPersonName"
             android:textColor="#0C0B0B"
@@ -78,7 +79,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
         android:layout_width="320dp"
-        android:layout_height="96dp"
+        android:layout_height="86dp"
         android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
@@ -114,6 +115,7 @@
             android:layout_marginLeft="80dp"
             android:layout_marginTop="50dp"
             android:ems="10"
+            android:textSize="15dp"
             android:hint="@string/reg_page_tourist_contact"
             android:inputType="number"
             android:textColor="#0C0B0B"
@@ -126,33 +128,34 @@
         android:layout_width="159dp"
         android:layout_height="52dp"
         android:layout_below="@+id/image1"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:onClick="registerTourist"
         android:text="Submit"
         android:textColor="#F8F8F8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintEnd_toStartOf="@+id/regsubmit2"
+        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image1" />
+        app:layout_constraintTop_toBottomOf="@+id/currency" />
 
     <Button
         android:id="@+id/regsubmit2"
         android:layout_width="159dp"
         android:layout_height="52dp"
         android:layout_below="@+id/image1"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="12dp"
         android:onClick="go_back"
         android:text="Back"
         android:textColor="#F8F8F8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintHorizontal_bias="0.884"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image1" />
+        app:layout_constraintTop_toBottomOf="@+id/currency" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="320dp"
-        android:layout_height="96dp"
+        android:layout_height="86dp"
         android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
@@ -188,6 +191,7 @@
             android:layout_marginLeft="80dp"
             android:layout_marginTop="50dp"
             android:ems="10"
+            android:textSize="15dp"
             android:hint="@string/reg_page_tourist_email"
             android:inputType="textEmailAddress"
             android:textColor="#0C0B0B"
@@ -198,8 +202,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="320dp"
-        android:layout_height="96dp"
+        android:layout_width="318dp"
+        android:layout_height="86dp"
         android:layout_marginTop="12dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
@@ -231,11 +235,12 @@
 
         <EditText
             android:id="@+id/regname"
-            android:layout_width="wrap_content"
+            android:layout_width="253dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="50dp"
             android:ems="10"
+            android:textSize="15dp"
             android:hint="@string/reg_page_nameField"
             android:inputType="textPersonName"
             android:textColor="#0C0B0B"
@@ -246,7 +251,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/image1"
         android:layout_width="320dp"
-        android:layout_height="96dp"
+        android:layout_height="86dp"
         android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/silver"
         app:cardCornerRadius="15dp"
@@ -282,6 +287,7 @@
             android:layout_marginLeft="80dp"
             android:layout_marginTop="50dp"
             android:ems="10"
+            android:textSize="15dp"
             android:hint="Enter image URL"
             android:inputType="textPersonName"
             android:textColor="#0C0B0B"
@@ -289,20 +295,12 @@
 
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="33dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/previous" />
 
     <TextView
         android:id="@+id/addtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Add Guides"
         android:textColor="@color/black"
@@ -310,8 +308,57 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.794" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/currency"
+        android:layout_width="320dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/silver"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image1">
+
+        <ImageView
+            android:id="@+id/currency1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="160dp"
+            android:scrollbarSize="3dp"
+            app:srcCompat="@drawable/dollar" />
+
+        <TextView
+            android:id="@+id/currency2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Price"
+            android:textColor="#090808"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/currencytxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="Enter per tour price"
+            android:inputType="textPersonName"
+            android:textColor="#0C0B0B"
+            android:textColorHint="#0C0C0C"
+            android:textSize="15dp" />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv1"
-        android:layout_width="288dp"
-        android:layout_height="485dp"
+        android:layout_width="303dp"
+        android:layout_height="554dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="130dp"
         android:text="Guide Update"
         android:textColor="#FF9800"
