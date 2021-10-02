@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -8,19 +7,4 @@
         android:title="Search"
         app:showAsAction="always"
         app:actionViewClass="android.widget.SearchView"/>
-
-
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <item android:id="@+id/search"
-        android:icon="@drawable/search"
-        android:title="Search"
-        app:showAsAction="always"
-        app:actionViewClass="android.widget.SearchView"/>
-
-
->>>>>>> 89b767283358ccc04bdf74584ec53c3c2229eb1f
 </menu>
