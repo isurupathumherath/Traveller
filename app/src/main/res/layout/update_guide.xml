@@ -55,24 +55,35 @@
             android:layout_below="@+id/ucontacttext"
             android:layout_marginLeft="10dp"
             />
+
         <TextView
+            android:id="@+id/utypetext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/utypetext"
-            android:text="Type"
-            android:textSize="15sp"
-            android:textColor="#000"
-            android:layout_toRightOf="@+id/uimg1"
             android:layout_below="@+id/uemailtext"
             android:layout_marginLeft="10dp"
-            />
+            android:layout_toRightOf="@+id/uimg1"
+            android:text="Type"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ucurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/utypetext"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/uimg1"
+            android:text="Currency"
+            android:textColor="#000"
+            android:textSize="15sp" />
         <!--            android:layout_centerVerticle = "true"-->
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/utypetext"
+        android:layout_below="@id/ucurrency"
         android:orientation="horizontal">
 
         <Button

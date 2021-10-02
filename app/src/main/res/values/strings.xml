@@ -76,4 +76,6 @@
     <string name="addHotel">Add Hotel</string>
     <string name="activityAllHotel">All Hotels</string>
     <string name="updateHotel">Update Hotel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

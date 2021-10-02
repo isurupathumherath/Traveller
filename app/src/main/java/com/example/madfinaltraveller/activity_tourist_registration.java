@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class activity_tourist_registration extends AppCompatActivity {
 
-    EditText ed_regname, ed_regemail, ed_regcontact, ed_regtype, ed_image;
+    EditText ed_regname, ed_regemail, ed_regcontact, ed_regtype, ed_image, ed_currency;
 
     Guide newtourist;
     DatabaseReference db;
@@ -28,6 +28,7 @@ public class activity_tourist_registration extends AppCompatActivity {
         ed_regcontact= findViewById(R.id.regcontact);
         ed_regtype = findViewById(R.id.regtype);
         ed_image = findViewById(R.id.imgtext);
+        ed_currency = findViewById(R.id.currencytxt);
         newtourist = new Guide();
 
     }
@@ -52,6 +53,8 @@ public class activity_tourist_registration extends AppCompatActivity {
         }
         else if(TextUtils.isEmpty(ed_regtype.getText().toString().trim())){
             Toast.makeText(getApplicationContext(),"Please choose a type", Toast.LENGTH_LONG).show();
+        }else if(TextUtils.isEmpty(ed_currency.getText().toString().trim())){
+            Toast.makeText(getApplicationContext(),"Please enter a currency", Toast.LENGTH_LONG).show();
         }else {
 
 //          Tourist newtourist = new Tourist(ed_regname.getText().toString().trim(), ed_regemail.getText().toString().trim(), Integer.parseInt(ed_regcontact.getText().toString().trim()), ed_regtype.getText().toString().trim() );
@@ -61,6 +64,7 @@ public class activity_tourist_registration extends AppCompatActivity {
             newtourist.setType(ed_regtype.getText().toString().trim());
             newtourist.setContact(ed_regcontact.getText().toString().trim());
             newtourist.setImage(ed_image.getText().toString().trim());
+            newtourist.setCurrency(ed_currency.getText().toString().trim());
             db.push().setValue(newtourist);
 
             Toast.makeText(getApplicationContext(), "Registration successfull", Toast.LENGTH_LONG).show();
@@ -69,6 +73,7 @@ public class activity_tourist_registration extends AppCompatActivity {
             ed_regtype.getText().clear();
             ed_regcontact.getText().clear();
             ed_image.getText().clear();
+            ed_currency.getText().clear();
 
 
         }
