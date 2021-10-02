@@ -37,6 +37,11 @@
             android:name=".Loginpage"
 <<<<<<< Updated upstream
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
 <!--        Added by chamodh-->
@@ -71,11 +76,7 @@
 <<<<<<< Updated upstream
             android:name="com.example.madfinaltraveller.activity_sample_landing_page"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
 =======
@@ -116,8 +117,18 @@
             android:name=".activity_admin_taxi"
             android:exported="true">
 
+<<<<<<< HEAD
         </activity>
 >>>>>>> Stashed changes
+=======
+        <activity
+            android:name=".ClientHomenew"
+            android:exported="true" />
+        <activity
+            android:name=".newAdminhome"
+            android:exported="true" />
+
+>>>>>>> 6d764edaf9054f9a578a9ad8c7739d546a04eaa2
     </application>
 
 </manifest>

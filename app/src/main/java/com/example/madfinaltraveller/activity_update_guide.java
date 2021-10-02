@@ -56,6 +56,13 @@ public class activity_update_guide extends AppCompatActivity {
 
     }
 
+    public void back(View view){
+
+        Intent intent = new Intent(this,newAdminhome.class);
+        startActivity(intent);
+
+    }
+
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.search, menu);

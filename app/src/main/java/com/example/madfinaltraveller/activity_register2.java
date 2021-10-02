@@ -26,7 +26,7 @@ public class activity_register2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register2);
 
         user_n=findViewById(R.id.U_name);
         e_mail=findViewById(R.id.E_mail);
