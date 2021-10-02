@@ -104,12 +104,5 @@
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold" />
-
-
-
-
     </RelativeLayout>
-
-
-
 </androidx.cardview.widget.CardView>
