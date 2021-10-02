@@ -54,6 +54,19 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Guide, MainAdapter.myVi
 
             }
         });
+
+        holder.btnseecomment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(v.getContext(), specific_guide_review.class);
+                i.putExtra("name", model.getName());
+                i.putExtra("image", model.getImage());
+                v.getContext().startActivity(i);
+
+
+            }
+        });
     }
 
 
@@ -71,7 +84,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Guide, MainAdapter.myVi
 
         CircleImageView img;
         TextView name, contact, email, type;
-        Button btnaddcommit;
+        Button btnaddcommit, btnseecomment;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -82,6 +95,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Guide, MainAdapter.myVi
             email = (TextView)itemView.findViewById(R.id.emailtext);
             type = (TextView)itemView.findViewById(R.id.typetext);
             btnaddcommit = (Button)itemView.findViewById(R.id.btnaddcomment);
+            btnseecomment = (Button)itemView.findViewById(R.id.btnseecomment);
 
 
         }

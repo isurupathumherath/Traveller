@@ -35,7 +35,7 @@ public class Loginpage extends AppCompatActivity {
     }
 
     public void UserLogin(View view){
-        Intent i1=new Intent(this,newAdminhome.class);
+        Intent i1=new Intent(this,home_admin.class);
         Intent i2=new Intent(this,ClientHomenew.class);
         db= FirebaseDatabase.getInstance().getReference().child("User").child(Uname.getText().toString().trim());
         db.addListenerForSingleValueEvent(new ValueEventListener() {
