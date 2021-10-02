@@ -3,14 +3,23 @@ package com.example.madfinaltraveller;
 public class Guide {
 
     Guide(){}
-    String name, contact, image, email, type;
+    String name, contact, image, email, type, currency;
 
-    public Guide(String name, String contact, String image, String email, String type) {
+    public Guide(String name, String contact, String image, String email, String type, String currency) {
         this.name = name;
         this.contact = contact;
         this.image = image;
         this.email = email;
         this.type = type;
+        this.currency = currency;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 
     public void setName(String name) {

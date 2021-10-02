@@ -8,22 +8,20 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Update Details"
-        android:background="@color/purple_200"
-        android:textSize="24dp"
         android:gravity="center"
-        android:textColor="@color/white"/>
-
+        android:background="#E18B6B"
+        android:text="Update Details"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:gravity="center"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
         android:layout_marginBottom="5dp"
-        android:gravity="center"/>
+        android:text="Driver's Name"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -31,123 +29,130 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:textColor="@color/black"
-        android:layout_gravity="center"
-        android:id="@+id/utxtname"/>
+        android:gravity="center"
+        android:id="@+id/et_DriverName"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email address"
+        android:gravity="center"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
         android:layout_marginBottom="5dp"
-        android:gravity="center"/>
+        android:text="Contact Number"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:textColor="@color/black"
         android:background="@drawable/rounded"
-        android:layout_gravity="center"
-        android:id="@+id/utxtemail"/>
+        android:gravity="center"
+        android:id="@+id/et_ContactNo"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contact"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"/>
-
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
-        android:layout_gravity="center"
-        android:id="@+id/utxtcurrency"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Currency"
-        android:textColor="@color/black"
+        android:gravity="center"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:gravity="center"/>
+        android:text="Vehicle Number"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:textColor="@color/black"
         android:background="@drawable/rounded"
-        android:layout_gravity="center"
-        android:id="@+id/utxtcontact"/>
+        android:gravity="center"
+        android:id="@+id/et_VehicleNo"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Type"
-        android:textColor="@color/black"
+        android:gravity="center"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:gravity="center"/>
+        android:text="Taxi Id"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:layout_gravity="center"
-        android:id="@+id/utxttype"/>
+        android:gravity="center"
+        android:id="@+id/et_TaxiId"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Image URL"
-        android:textColor="@color/black"
+        android:gravity="center"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:gravity="center"/>
+        android:text="Available Area"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:textColor="@color/black"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:layout_gravity="center"
-        android:id="@+id/utxtimage"/>
+        android:gravity="center"
+        android:id="@+id/et_AvaArea"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Price per Km"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/et_PerKm"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="URL for Profile Picture"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/et_ProfURL"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Update"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textSize="21dp"
         android:textAllCaps="false"
         android:background="@drawable/rounded"
         android:gravity="center"
-        android:text="Update"
         android:id="@+id/btnUpdate"/>
+
+
 
 </LinearLayout>

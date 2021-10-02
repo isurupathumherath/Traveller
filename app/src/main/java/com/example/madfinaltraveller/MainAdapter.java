@@ -35,6 +35,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Guide, MainAdapter.myVi
         holder.email.setText(model.getEmail());
         holder.contact.setText(model.getContact());
         holder.type.setText(model.getType());
+        holder.currency.setText(model.getCurrency());
 
         Glide.with(holder.img.getContext()).
                 load(model.getImage()).
@@ -49,6 +50,31 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Guide, MainAdapter.myVi
                 Intent i = new Intent(v.getContext(), activity_guide_review.class);
                 i.putExtra("name", model.getName());
                 i.putExtra("image", model.getImage());
+                v.getContext().startActivity(i);
+
+
+            }
+        });
+
+        holder.btnseecomment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(v.getContext(), specific_guide_review.class);
+                i.putExtra("name", model.getName());
+                i.putExtra("image", model.getImage());
+                v.getContext().startActivity(i);
+
+
+            }
+        });
+
+        holder.btnseecurrency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(v.getContext(), currency_change.class);
+                i.putExtra("currency", model.getCurrency());
                 v.getContext().startActivity(i);
 
 
@@ -70,18 +96,23 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Guide, MainAdapter.myVi
     class myViewHolder extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView name, contact, email, type;
-        Button btnaddcommit;
+        TextView name, contact, email, type, currency;
+        Button btnaddcommit, btnseecomment, btnseecurrency;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
+
             img = (CircleImageView)itemView.findViewById(R.id.img1);
             name = (TextView)itemView.findViewById(R.id.nametext);
             contact = (TextView)itemView.findViewById(R.id.contacttext);
+            currency = (TextView)itemView.findViewById(R.id.currencytext);
             email = (TextView)itemView.findViewById(R.id.emailtext);
             type = (TextView)itemView.findViewById(R.id.typetext);
             btnaddcommit = (Button)itemView.findViewById(R.id.btnaddcomment);
+            btnseecomment = (Button)itemView.findViewById(R.id.btnseecomment);
+            btnseecurrency = (Button)itemView.findViewById(R.id.btnseecurrency);
+
 
 
         }
