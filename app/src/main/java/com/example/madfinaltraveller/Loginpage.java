@@ -35,18 +35,9 @@ public class Loginpage extends AppCompatActivity {
     }
 
     public void UserLogin(View view){
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-//        Intent i1=new Intent(this,Adminhome.class);
-        Intent i2=new Intent(this,Allusers.class);
-=======
+
         Intent i1=new Intent(this,home_admin.class);
         Intent i2=new Intent(this,ClientHomenew.class);
->>>>>>> Stashed changes
-=======
-        Intent i1=new Intent(this,newAdminhome.class);
-        Intent i2=new Intent(this,ClientHomenew.class);
->>>>>>> 6d764edaf9054f9a578a9ad8c7739d546a04eaa2
         db= FirebaseDatabase.getInstance().getReference().child("User").child(Uname.getText().toString().trim());
         db.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
