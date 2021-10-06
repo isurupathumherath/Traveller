@@ -12,21 +12,25 @@
                     android:id="@+id/log_o"
                     android:title="Logout"
                     android:icon="@drawable/logout"/>
+                <item
+                    android:id="@+id/profile"
+                    android:title="My Profile"
+                    android:icon="@drawable/profile"/>
             </group>
         </menu>
     </item>
 
-        <item
-            android:title="Hotel">
-            <menu>
-                <group android:checkableBehavior="single">
+    <item
+        android:title="Hotel">
+        <menu>
+            <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/viewHotel"
                     android:title="View Hotel"
                     android:icon="@drawable/court"/>
-                </group>
-            </menu>
-        </item>
+            </group>
+        </menu>
+    </item>
 
     <item
         android:title="Guide">
@@ -50,16 +54,5 @@
             </group>
         </menu>
     </item>
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_home2"
-                android:title="Home"
-                android:icon="@drawable/guide"/>
-            <item
-                android:id="@+id/nav_car2"
-                android:title="Home"
-                android:icon="@drawable/guide"/>
-        </menu>
-    </item>
+
 </menu>

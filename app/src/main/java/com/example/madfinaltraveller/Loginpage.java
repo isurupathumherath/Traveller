@@ -44,6 +44,7 @@ public class Loginpage extends AppCompatActivity {
                 if(snapshot.hasChildren()){
                     if(snapshot.child("password").getValue().toString().equals(pass.getText().toString())){
                         if(snapshot.child("type").getValue().toString().equals("Tourist")){
+                            i2.putExtra("username",Uname.getText().toString().trim());
                             startActivity(i2);
                         }
                         else{

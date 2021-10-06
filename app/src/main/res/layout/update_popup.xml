@@ -28,6 +28,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:gravity="center"
+        android:textAlignment="center"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
@@ -50,6 +52,7 @@
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:background="@drawable/rounded"
         android:layout_gravity="center"
@@ -73,6 +76,7 @@
         android:layout_marginLeft="10dp"
         android:textColor="@color/black"
         android:layout_marginRight="10dp"
+        android:textAlignment="center"
         android:background="@drawable/rounded"
         android:layout_gravity="center"
         android:id="@+id/utxtcurrency"/>
@@ -93,6 +97,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textColor="@color/black"
+        android:textAlignment="center"
         android:background="@drawable/rounded"
         android:layout_gravity="center"
         android:id="@+id/utxtcontact"/>
@@ -111,6 +116,7 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
@@ -121,6 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Image URL"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
@@ -135,6 +142,7 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
         android:layout_gravity="center"
+        android:textAlignment="center"
         android:id="@+id/utxtimage"/>
 
     <Button

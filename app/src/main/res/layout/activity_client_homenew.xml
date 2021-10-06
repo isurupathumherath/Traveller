@@ -25,7 +25,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/hotels_client"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginEnd="24dp"
@@ -33,13 +33,15 @@
             app:layout_constraintEnd_toStartOf="@+id/textView6"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.499"
+            android:onClick="showall"
             app:srcCompat="@drawable/house" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/guide_client"
             android:layout_width="66dp"
             android:layout_height="61dp"
             android:layout_marginStart="20dp"
+            android:onClick="moveGuide"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView6"
             app:layout_constraintTop_toTopOf="parent"
@@ -47,7 +49,7 @@
             app:srcCompat="@drawable/guide" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/taxi_client"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginBottom="8dp"
@@ -55,6 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
+            android:onClick="taxi"
             app:srcCompat="@drawable/taxi" />
 
         <TextView

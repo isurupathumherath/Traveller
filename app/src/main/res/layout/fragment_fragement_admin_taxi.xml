@@ -14,14 +14,14 @@
         android:layout_width="182dp"
         android:layout_height="85dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="230dp"
-        android:text="View taxi" />
+        android:layout_marginTop="390dp"
+        android:text="Add taxi" />
 
     <Button
         android:id="@+id/taxiview"
         android:layout_width="182dp"
         android:layout_height="85dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="390dp"
-        android:text="Add taxi" />
+        android:layout_marginTop="230dp"
+        android:text="View taxi" />
 </FrameLayout>

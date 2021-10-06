@@ -40,23 +40,15 @@ public class home_admin extends AppCompatActivity {
             ft.replace(R.id.frdefault,fragment);
             ft.commit();
         }
+        if (view == findViewById(R.id.staticbtn)){
+            fragment = new fragement_admin_statistic();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.frdefault,fragment);
+            ft.commit();
+        }
     }
 
-//    public void guideU(View view){
-//        Intent i=new Intent(this,activity_update_guide.class);
-//        startActivity(i);
-//    }
-//
-//    public void hotelU(View view){
-//        Intent i=new Intent(this,activity_update_hotel.class);
-//        startActivity(i);
-//    }
 
-//    public void taxiU(View view){}
-
-//    public void allU(View view){
-//        Intent i=new Intent(this,Allusers.class);
-//        startActivity(i);
-//    }
 
 }

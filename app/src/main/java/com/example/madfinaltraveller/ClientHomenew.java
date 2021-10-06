@@ -20,11 +20,14 @@ public class ClientHomenew extends AppCompatActivity implements NavigationView.O
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-
+    String usern;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_homenew);
+
+        Intent intent=getIntent();
+        usern=intent.getStringExtra("username");
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
@@ -39,16 +42,23 @@ public class ClientHomenew extends AppCompatActivity implements NavigationView.O
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-//    public void moveGuide(View view){
-//        Intent i=new Intent(this,MainActivity.class);
-//        startActivity(i);
-//    }
+    public void moveGuide(View view){
+        Intent i=new Intent(this,MainActivity.class);
+        i.putExtra("un",usern);
+        startActivity(i);
+    }
 //
-//    public void showall(View view){
-//        Intent i=new Intent(this,activity_show_hotel.class);
-//        startActivity(i);
-//    }
+    public void showall(View view){
+        Intent i=new Intent(this,activity_show_hotel.class);
+        i.putExtra("un",usern);
+        startActivity(i);
+    }
 
+    public void taxi(View view){
+        Intent i=new Intent(this,activity_client_taxi.class);
+        i.putExtra("un",usern);
+        startActivity(i);
+    }
     @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
@@ -67,16 +77,24 @@ public class ClientHomenew extends AppCompatActivity implements NavigationView.O
         switch (item.getItemId()) {
             case R.id.homepage:
                 break;
+            case R.id.profile:
+                Intent in=new Intent(this,updateUser.class);
+                in.putExtra("un",usern);
+                startActivity(in);
+                break;
             case R.id.log_o:
                 Intent i0=new Intent(this,Loginpage.class);
+                i0.putExtra("un",usern);
                 startActivity(i0);
                 break;
             case R.id.viewHotel:
                 Intent i = new Intent(this, activity_show_hotel.class);
+                i.putExtra("un",usern);
                 startActivity(i);
                 break;
             case R.id.viewguide:
                 Intent i1 = new Intent(this, MainActivity.class);
+                i1.putExtra("un",usern);
                 startActivity(i1);
                 break;
             case R.id.viewtaxi:

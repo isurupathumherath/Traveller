@@ -8,15 +8,17 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RV"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_alltaxiad" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -24,10 +26,39 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="53dp"
+        android:backgroundTint="#FF8400"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="#FF8400"
         app:srcCompat="@drawable/add_new"
         tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/txt_alltaxiad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="cursive"
+        android:text="@string/txt_alltaxiad"
+        android:textColor="#FF6822"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="51dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="34dp"
+        android:onClick="back"
+        app:layout_constraintEnd_toStartOf="@+id/txt_alltaxiad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
