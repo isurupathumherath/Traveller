@@ -1,6 +1,8 @@
 package com.example.madfinaltraveller;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,49 +42,69 @@ public class Add_taxi extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 insertData();
-                clearAll();
             }
         });
 
 
-//        btnBack.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                finish();
-//
-//            }
-//        });
     }
 
+    public void go_back(View view){
+
+        Intent intent = new Intent(this,activity_admin_taxi.class);
+        startActivity(intent);
+
+    }
 
     private void insertData()
     {
+        if(TextUtils.isEmpty(drivername.getText().toString())){
+            Toast.makeText(getApplicationContext(),"Enter Driver's name",Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(contactno.getText().toString())){
+            Toast.makeText(getApplicationContext(),"Enter a contact Number",Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(vehicleno.getText().toString())){
+            Toast.makeText(getApplicationContext(),"Enter The Vehicle Number",Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(taxiid.getText().toString())){
+            Toast.makeText(getApplicationContext(),"Enter The Taxi ID",Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(avaarea.getText().toString())){
+            Toast.makeText(getApplicationContext(),"Enter The Available Area",Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(perkm.getText().toString())){
+            Toast.makeText(getApplicationContext(),"Enter The Price Per km",Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(profurl.getText().toString())){
+            Toast.makeText(getApplicationContext(),"Enter a URL",Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Map<String, Object> map = new HashMap<>();
+            map.put("DriverName", drivername.getText().toString());
+            map.put("ContactNo", contactno.getText().toString());
+            map.put("VehicleNo", vehicleno.getText().toString());
+            map.put("TaxiId", taxiid.getText().toString());
+            map.put("AvaArea", avaarea.getText().toString());
+            map.put("PerKm", perkm.getText().toString());
+            map.put("profURL", profurl.getText().toString());
 
-        Map<String,Object> map=new HashMap<>();
-        map.put("DriverName",drivername.getText().toString());
-        map.put("ContactNo",contactno.getText().toString());
-        map.put("VehicleNo",vehicleno.getText().toString());
-        map.put("TaxiId",taxiid.getText().toString());
-        map.put("AvaArea",avaarea.getText().toString());
-        map.put("PerKm",perkm.getText().toString());
-        map.put("profURL",profurl.getText().toString());
+            FirebaseDatabase.getInstance().getReference().child("Taxiis").push()
+                    .setValue(map)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(Add_taxi.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
+                            clearAll();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(Exception e) {
+                            Toast.makeText(Add_taxi.this, "Error while adding data", Toast.LENGTH_SHORT).show();
 
-        FirebaseDatabase.getInstance().getReference().child("Taxiis").push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(Add_taxi.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure( Exception e) {
-                        Toast.makeText(Add_taxi.this, "Error while adding data", Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-
+                        }
+                    });
+        }
     }
 
     private void clearAll()

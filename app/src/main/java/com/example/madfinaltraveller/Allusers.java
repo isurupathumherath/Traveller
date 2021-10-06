@@ -53,7 +53,9 @@ public class Allusers extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
                     USER user=dataSnapshot1.getValue(USER.class);
-                    list.add(user);
+                    if(user.getType().equals("Tourist")){
+                        list.add(user);
+                    }
                 }
                 myadapter.notifyDataSetChanged();
             }

@@ -1,5 +1,6 @@
 package com.example.madfinaltraveller;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,19 +13,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class activity_update_guide extends AppCompatActivity {
 
     RecyclerView recyclerView1;
     com.example.madfinaltraveller.UpdateAdapter mainadapter;
+    FloatingActionButton fb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_guide);
 
         recyclerView1 = (RecyclerView)findViewById(R.id.rv1);
-
+        fb = (FloatingActionButton)findViewById(R.id.fb1);
         recyclerView1.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<Guide> options =
@@ -34,6 +37,13 @@ public class activity_update_guide extends AppCompatActivity {
 
         mainadapter = new com.example.madfinaltraveller.UpdateAdapter(options);
         recyclerView1.setAdapter(mainadapter);
+
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), activity_tourist_registration.class));
+            }
+        });
     }
 
     @Override
@@ -58,7 +68,7 @@ public class activity_update_guide extends AppCompatActivity {
 
     public void back(View view){
 
-        Intent intent = new Intent(this,newAdminhome.class);
+        Intent intent = new Intent(this,home_admin.class);
         startActivity(intent);
 
     }

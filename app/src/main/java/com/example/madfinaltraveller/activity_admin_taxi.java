@@ -98,4 +98,8 @@ public class activity_admin_taxi extends AppCompatActivity {
 
     }
 
+    public void back(View view){
+        Intent i=new Intent(this,home_admin.class);
+        startActivity(i);
+    }
 }

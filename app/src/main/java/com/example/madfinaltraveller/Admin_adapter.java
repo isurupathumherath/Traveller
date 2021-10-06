@@ -177,7 +177,7 @@ public class Admin_adapter extends FirebaseRecyclerAdapter<TaxiModel,Admin_adapt
             taxiid=(TextView) itemView.findViewById(R.id.txt_TaxiId);
             avaarea=(TextView) itemView.findViewById(R.id.txt_AvaArea);
             perkm=(TextView) itemView.findViewById(R.id.txt_PerKm);
-            profurl=(TextView) itemView.findViewById(R.id.txt_profURL);
+//            profurl=(TextView) itemView.findViewById(R.id.txt_profURL);
 
             btnEdit=(Button)itemView.findViewById(R.id.btnEdit);
             btnDelete=(Button)itemView.findViewById(R.id.btnDelete);

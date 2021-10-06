@@ -11,24 +11,23 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class admin_user_fragement extends Fragment {
-
+public class fragement_admin_statistic extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_admin_user_fragement, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_fragement_admin_statistic, container, false);
 
-        Button button = (Button) rootView.findViewById(R.id.hoteladd);
-        Button button1 = (Button) rootView.findViewById(R.id.hotelview);
+        Button button = (Button) rootView.findViewById(R.id.statisticiview);
+        Button button1 = (Button) rootView.findViewById(R.id.statisticiviewusers);
 
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), activity_register_hotel.class);
+                Intent intent = new Intent(getActivity(), StatPageAdmin.class);
                 startActivity(intent);
             }
         });
@@ -36,11 +35,10 @@ public class admin_user_fragement extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), activity_update_hotel_layout.class);
+                Intent intent = new Intent(getActivity(), Allusers.class);
                 startActivity(intent);
             }
         });
-
 
         return rootView;
     }

@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:gravity="center"
         android:background="#E18B6B"
+        android:gravity="center"
         android:text="Add Taxi"
         android:textColor="@color/black"
         android:textSize="25dp" />
@@ -17,156 +17,156 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Driver's Name"/>
+        android:gravity="center"
+        android:text="Driver's Name"
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/et_DriverName"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/et_DriverName"/>
+        android:gravity="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Contact Number"/>
+        android:gravity="center"
+        android:text="Contact Number"
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/et_ContactNo"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/et_ContactNo"/>
+        android:gravity="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Vehicle Number"/>
+        android:gravity="center"
+        android:text="Vehicle Number"
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/et_VehicleNo"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/et_VehicleNo"/>
+        android:gravity="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Taxi Id"/>
+        android:gravity="center"
+        android:text="Taxi Id"
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/et_TaxiId"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/et_TaxiId"/>
+        android:gravity="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Available Area"/>
+        android:gravity="center"
+        android:text="Available Area"
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/et_AvaArea"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/et_AvaArea"/>
+        android:gravity="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Price per Km"/>
+        android:gravity="center"
+        android:text="Price per Km"
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/et_PerKm"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/et_PerKm"/>
+        android:gravity="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="URL for Profile Picture"/>
+        android:gravity="center"
+        android:text="URL for Profile Picture"
+        android:textSize="20sp" />
 
     <EditText
+        android:id="@+id/et_ProfURL"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/et_ProfURL"/>
+        android:gravity="center" />
 
     <Button
+        android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
         android:text="Save"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="10dp"
-        android:textSize="21dp"
         android:textAllCaps="false"
-        android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/btnAdd"/>
+        android:textSize="21dp" />
 
     <Button
+        android:id="@+id/btnBack"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="10dp"
-        android:textSize="21dp"
-        android:textAllCaps="false"
-       android:backgroundTint="#EF6FB5"
+        android:layout_height="50dp"
         android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:backgroundTint="#ffa45c"
         android:gravity="center"
-        android:id="@+id/btnBack"/>
-
+        android:onClick="go_back"
+        android:text="View All Taxiis"
+        android:textAllCaps="false"
+        android:textSize="21dp" />
 
 
 </LinearLayout>

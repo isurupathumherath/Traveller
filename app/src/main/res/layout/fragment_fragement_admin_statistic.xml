@@ -3,32 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin_user_fragement"
-    android:background="@color/white">
+    tools:context=".fragement_admin_statistic">
 
     <!-- TODO: Update blank fragment layout -->
-
-
     <Button
-        android:id="@+id/hoteladd"
+        android:id="@+id/statisticiview"
         android:layout_width="182dp"
         android:layout_height="85dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="230dp"
-        android:text="Add Hotel" />
+        android:text="View Statistic" />
 
     <Button
-        android:id="@+id/hotelview"
+        android:id="@+id/statisticiviewusers"
         android:layout_width="182dp"
         android:layout_height="85dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="390dp"
-        android:text="View Hotel" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="9dp"
-        android:text="TextView" />
+        android:text="View all users" />
 
 </FrameLayout>

@@ -55,6 +55,11 @@
     <string name="rev_btn">Submit</string>review
     <string name="review">Enter review here</string>
     <string name="AllGuide">All Guides</string>
+    <string name="invalid_name">Invalid name</string>
+    <string name="invalid_type">Invalid type</string>
+    <string name="invalid_contact">Invalid Contact</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="invalid_currency">Invalid Currency</string>
 
 
     <string name="createHotelName">Hotel Name</string>
@@ -76,6 +81,7 @@
     <string name="addHotel">Add Hotel</string>
     <string name="activityAllHotel">All Hotels</string>
     <string name="updateHotel">Update Hotel</string>
+    <string name="txt_alltaxiad">All Taxiis</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,13 +1,5 @@
 package com.example.madfinaltraveller;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.SearchView;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +8,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.SearchView;
+
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class activity_client_taxi extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -28,34 +26,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     String usern;
 
     RecyclerView recyclerView;
-    com.example.madfinaltraveller.MainAdapter mainadapter;
-    Button addComment, viewComments;
-    TextView tv ;
-    String stringname;
+    taxi_client_adapter taxi_clientAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_client_taxi);
 
-        recyclerView = (RecyclerView)findViewById(R.id.rv);
-        addComment = (Button)findViewById(R.id.btnaddcomment);
-        viewComments = (Button)findViewById(R.id.btnseecomment);
+        recyclerView=(RecyclerView) findViewById(R.id.RV_client);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         Intent intent=getIntent();
         usern=intent.getStringExtra("un");
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
-        FirebaseRecyclerOptions<Guide> options =
-                new FirebaseRecyclerOptions.Builder<Guide>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Guide"), Guide.class)
+        FirebaseRecyclerOptions<TaxiModel> options =
+                new FirebaseRecyclerOptions.Builder<TaxiModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Taxiis"),TaxiModel.class)
                         .build();
 
-        mainadapter = new com.example.madfinaltraveller.MainAdapter(options);
-        recyclerView.setAdapter(mainadapter);
+        taxi_clientAdapter = new taxi_client_adapter(options);
+        recyclerView.setAdapter(taxi_clientAdapter);
 
-        drawerLayout=findViewById(R.id.constraint_layout2);
-        navigationView=findViewById(R.id.nav_view2);
+
+        drawerLayout=findViewById(R.id.constraint_layout5);
+        navigationView=findViewById(R.id.nav_view5);
         toolbar=findViewById(R.id.toolbar);
 
 
@@ -65,68 +58,61 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
-
-
     }
-
-
-
     @Override
     protected void onStart() {
         super.onStart();
-        mainadapter.startListening();
-
+        taxi_clientAdapter.startListening();
     }
-
 
     @Override
     protected void onStop() {
         super.onStop();
-        mainadapter.stopListening();
+        taxi_clientAdapter.stopListening();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
 
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.search, menu);
-        MenuItem item = menu.findItem(R.id.search22);
-        SearchView searchView = (SearchView) item.getActionView();
+        getMenuInflater().inflate(R.menu.searchtaxi,menu);
+        MenuItem item=menu.findItem(R.id.search);
+        SearchView searchView=(SearchView)item.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
-                txtSearch(query);
+            public boolean onQueryTextSubmit(String s) {
+                txtSearch(s);
                 return false;
             }
 
             @Override
-            public boolean onQueryTextChange(String query) {
-                txtSearch(query );
+            public boolean onQueryTextChange(String s) {
+                txtSearch(s);
                 return false;
             }
         });
-        return super.onCreateOptionsMenu(menu);
+
+        return  super.onCreateOptionsMenu(menu);
     }
 
-    private void txtSearch(String str){
-        FirebaseRecyclerOptions<Guide> options =
-                new FirebaseRecyclerOptions.Builder<Guide>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Guide").orderByChild("name").startAt(str).endAt(str+"~"), Guide.class)
+    private  void txtSearch(String str)
+    {
+
+        FirebaseRecyclerOptions<TaxiModel> options =
+                new FirebaseRecyclerOptions.Builder<TaxiModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Taxiis").orderByChild("AvaArea").startAt(str).endAt(str+"~"),TaxiModel.class)
                         .build();
+        taxi_clientAdapter=new taxi_client_adapter(options);
+        taxi_clientAdapter.startListening();
+        recyclerView.setAdapter(taxi_clientAdapter);
 
-        mainadapter = new com.example.madfinaltraveller.MainAdapter(options);
-        mainadapter.startListening();
-        recyclerView.setAdapter(mainadapter);
     }
-
 
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
             case R.id.homepage:
                 Intent i2=new Intent(this,ClientHomenew.class);
-                i2.putExtra("un",usern);
                 startActivity(i2);
                 break;
             case R.id.profile:
@@ -136,19 +122,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.log_o:
                 Intent i0=new Intent(this,Loginpage.class);
-                i0.putExtra("un",usern);
                 startActivity(i0);
                 break;
             case R.id.viewHotel:
                 Intent i = new Intent(this, activity_show_hotel.class);
-                i.putExtra("un",usern);
                 startActivity(i);
                 break;
             case R.id.viewguide:
+                Intent i1 = new Intent(this, MainActivity.class);
+                startActivity(i1);
                 break;
             case R.id.viewtaxi:
                 Intent i6 = new Intent(this, activity_client_taxi.class);
-                i6.putExtra("un",usern);
                 startActivity(i6);
                 break;
         }
