@@ -3,18 +3,28 @@ package com.example.madfinaltraveller;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class activity_guide_review extends AppCompatActivity {
+public class activity_guide_review extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
 
     TextView getnames;
     String str,image;
@@ -36,6 +46,18 @@ public class activity_guide_review extends AppCompatActivity {
         getnames.setText(str);
         newReview = new Reviews();
 
+        drawerLayout=findViewById(R.id.constraint_layout1);
+        navigationView=findViewById(R.id.nav_view1);
+        toolbar=findViewById(R.id.toolbar);
+
+
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(this);
+
 //        img.setImageDrawable(res);
     }
 
@@ -47,7 +69,6 @@ public class activity_guide_review extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Please enter a review", Toast.LENGTH_LONG).show();
         }else{
 
-//          Tourist newtourist = new Tourist(ed_regname.getText().toString().trim(), ed_regemail.getText().toString().trim(), Integer.parseInt(ed_regcontact.getText().toString().trim()), ed_regtype.getText().toString().trim() );
 
             newReview.setReview(review.getText().toString().trim());
             newReview.setUsername(getnames.getText().toString().trim());
@@ -67,5 +88,33 @@ public class activity_guide_review extends AppCompatActivity {
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
 
+    }
+
+
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.homepage:
+                Intent i2=new Intent(this,ClientHomenew.class);
+                startActivity(i2);
+                break;
+            case R.id.log_o:
+                Intent i0=new Intent(this,Loginpage.class);
+                startActivity(i0);
+                break;
+            case R.id.viewHotel:
+                Intent i = new Intent(this, activity_show_hotel.class);
+                startActivity(i);
+                break;
+            case R.id.viewguide:
+                Intent i1 = new Intent(this, MainActivity.class);
+                startActivity(i1);
+                break;
+            case R.id.viewtaxi:
+                Intent i6 = new Intent(this, activity_client_taxi.class);
+                startActivity(i6);
+                break;
+        }
+        return true;
     }
 }

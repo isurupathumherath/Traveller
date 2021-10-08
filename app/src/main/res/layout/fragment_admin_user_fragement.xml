@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin_user_fragement"
+    android:background="@color/white">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <Button
+        android:id="@+id/hoteladd"
+        android:layout_width="182dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="230dp"
+        android:text="Add Hotel" />
+
+    <Button
+        android:id="@+id/hotelview"
+        android:layout_width="182dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="390dp"
+        android:text="View Hotel" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="9dp"
+        android:text="TextView" />
+
+</FrameLayout>

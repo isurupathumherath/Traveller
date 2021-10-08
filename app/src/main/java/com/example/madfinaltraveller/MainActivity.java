@@ -1,5 +1,6 @@
 package com.example.madfinaltraveller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -7,14 +8,24 @@ import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+    String usern;
 
     RecyclerView recyclerView;
     com.example.madfinaltraveller.MainAdapter mainadapter;
@@ -29,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView)findViewById(R.id.rv);
         addComment = (Button)findViewById(R.id.btnaddcomment);
         viewComments = (Button)findViewById(R.id.btnseecomment);
+        Intent intent=getIntent();
+        usern=intent.getStringExtra("un");
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -40,6 +53,18 @@ public class MainActivity extends AppCompatActivity {
 
         mainadapter = new com.example.madfinaltraveller.MainAdapter(options);
         recyclerView.setAdapter(mainadapter);
+
+        drawerLayout=findViewById(R.id.constraint_layout2);
+        navigationView=findViewById(R.id.nav_view2);
+        toolbar=findViewById(R.id.toolbar);
+
+
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(this);
 
 
     }
@@ -96,7 +121,39 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+        switch (item.getItemId()) {
+            case R.id.homepage:
+                Intent i2=new Intent(this,ClientHomenew.class);
+                i2.putExtra("un",usern);
+                startActivity(i2);
+                break;
+            case R.id.profile:
+                Intent in=new Intent(this,updateUser.class);
+                in.putExtra("un",usern);
+                startActivity(in);
+                break;
+            case R.id.log_o:
+                Intent i0=new Intent(this,Loginpage.class);
+                i0.putExtra("un",usern);
+                startActivity(i0);
+                break;
+            case R.id.viewHotel:
+                Intent i = new Intent(this, activity_show_hotel.class);
+                i.putExtra("un",usern);
+                startActivity(i);
+                break;
+            case R.id.viewguide:
+                break;
+            case R.id.viewtaxi:
+                Intent i6 = new Intent(this, activity_client_taxi.class);
+                i6.putExtra("un",usern);
+                startActivity(i6);
+                break;
+        }
+        return true;
+    }
 
 
 }

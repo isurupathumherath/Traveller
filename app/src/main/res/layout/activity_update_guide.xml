@@ -9,23 +9,23 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv1"
-        android:layout_width="288dp"
-        android:layout_height="485dp"
+        android:layout_width="319dp"
+        android:layout_height="498dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="130dp"
         android:text="Guide Update"
         android:textColor="#FF9800"
@@ -35,26 +35,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="120dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="52dp"
-        android:onClick="go_add"
-        android:text="add new guide"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-    <Button
         android:id="@+id/button2"
         android:layout_width="109dp"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="56dp"
-        android:onClick="go_add"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:onClick="back"
         android:text="Menu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="48dp"
+        android:backgroundTint="#FF8400"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_new" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

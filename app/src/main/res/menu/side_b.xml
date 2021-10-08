@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Common">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/homepage"
+                    android:title="Home"
+                    android:icon="@drawable/house"/>
+                <item
+                    android:id="@+id/log_o"
+                    android:title="Logout"
+                    android:icon="@drawable/logout"/>
+                <item
+                    android:id="@+id/profile"
+                    android:title="My Profile"
+                    android:icon="@drawable/profile"/>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:title="Hotel">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/viewHotel"
+                    android:title="View Hotel"
+                    android:icon="@drawable/court"/>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:title="Guide">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/viewguide"
+                    android:title="View all guides"
+                    android:icon="@drawable/guide"/>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:title="Taxi">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/viewtaxi"
+                    android:title="View taxi services"
+                    android:icon="@drawable/taxi"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

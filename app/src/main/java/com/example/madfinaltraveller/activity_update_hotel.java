@@ -11,4 +11,6 @@ public class activity_update_hotel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_hotel);
     }
+
+
 }
