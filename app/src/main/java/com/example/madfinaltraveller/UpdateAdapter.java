@@ -76,6 +76,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
                 dialogPlus.show();
 
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
+                    String emailpattern="[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                     @Override
                     public void onClick(View v) {
                         Map<String, Object> map = new HashMap<>();
@@ -85,7 +86,10 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
                             Toast.makeText(holder.uname.getContext(), "Enter contact number", Toast.LENGTH_SHORT).show();
                         } else if (TextUtils.isEmpty(uemail.getText().toString())) {
                             Toast.makeText(holder.uname.getContext(), "Enter email", Toast.LENGTH_SHORT).show();
-                        } else if (TextUtils.isEmpty(utype.getText().toString())) {
+                        }else if(!uemail.getText().toString().matches(emailpattern)) {
+                            Toast.makeText(holder.uname.getContext(),"Email Entered is not valid",Toast.LENGTH_SHORT).show();
+                        }
+                        else if (TextUtils.isEmpty(utype.getText().toString())) {
                             Toast.makeText(holder.uname.getContext(), "Enter guide type", Toast.LENGTH_SHORT).show();
                         } else if (TextUtils.isEmpty(ucurrency.getText().toString())) {
                             Toast.makeText(holder.uname.getContext(), "Enter currency", Toast.LENGTH_SHORT).show();

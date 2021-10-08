@@ -118,7 +118,7 @@ public class activity_tourist_registration extends AppCompatActivity {
         //add validation for phone number
         awesomeValidation.addValidation(this,R.id.regcontact,"[0-9]{3}[0-9]{3}[0-9]{4}$",R.string.invalid_contact);
         //add validation for address
-        awesomeValidation.addValidation(this,R.id.currencytxt, RegexTemplate.NOT_EMPTY,R.string.invalid_currency);
+        awesomeValidation.addValidation(this,R.id.currencytxt, "[0-9]{1,}",R.string.invalid_currency);
 
         regsubmit.setOnClickListener(new View.OnClickListener() {
             @Override
