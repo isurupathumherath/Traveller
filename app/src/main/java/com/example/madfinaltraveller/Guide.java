@@ -5,7 +5,7 @@ public class Guide {
     Guide(){}
     String name, contact, image, email, type, currency;
 
-    public Guide(String name, String contact, String image, String email, String type, String currency) {
+    public Guide(String name, String email, String contact, String type, String currency, String image) {
         this.name = name;
         this.contact = contact;
         this.image = image;

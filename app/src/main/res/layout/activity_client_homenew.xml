@@ -28,53 +28,185 @@
             android:id="@+id/hotels_client"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499"
+            android:layout_marginTop="20dp"
             android:onClick="showall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.213"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFlipper"
             app:srcCompat="@drawable/house" />
 
         <ImageView
             android:id="@+id/guide_client"
             android:layout_width="66dp"
             android:layout_height="61dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:onClick="moveGuide"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.498"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFlipper"
             app:srcCompat="@drawable/guide" />
 
         <ImageView
             android:id="@+id/taxi_client"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
             android:onClick="taxi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.826"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFlipper"
             app:srcCompat="@drawable/taxi" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textView32"
+            android:layout_width="37dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="500dp"
+            android:text="Hotels"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.243"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="308dp"
+            android:layout_marginTop="500dp"
+            android:text="Guide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.522"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:text="Taxi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.789"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="169dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="117dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="118dp"
             android:text="Traveller"
             android:textColor="#000000"
             android:textSize="54dp"
             app:fontFamily="cursive"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.571"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="178dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="118dp"
+            android:text="Your Journey Starts Here!"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="5dp"
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+            <ImageView
+                android:id="@+id/hotelimagenew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/hotelimg" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/taximg" />
+
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="414dp"
+                android:layout_height="446dp"
+                app:srcCompat="@drawable/guideimg"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="250dp" />
+
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="414dp"
+                android:layout_height="446dp"
+                app:srcCompat="@drawable/place2"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="250dp" />
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="414dp"
+                android:layout_height="446dp"
+                app:srcCompat="@drawable/place3"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="250dp" />
+
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="414dp"
+                android:layout_height="446dp"
+                app:srcCompat="@drawable/place4"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="250dp" />
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="414dp"
+                android:layout_height="446dp"
+                app:srcCompat="@drawable/tax"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="250dp" />
+
+        </ViewFlipper>
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="47dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="moveprofile"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

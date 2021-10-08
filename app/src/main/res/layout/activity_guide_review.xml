@@ -22,6 +22,7 @@
         app:menu="@menu/side_b" />
 
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -39,6 +40,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar"
+            android:layout_width="238dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:screenReaderFocusable="true"
+            android:progressBackgroundTint="#FDFFB7"
+            android:progressTint="#FFD700"
+           android:secondaryProgressTint="#FFEE81"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_img"
+            tools:ignore="SpeakableTextPresentCheck" />
     <TextView
         android:id="@+id/text1"
         android:layout_width="0dp"
@@ -64,63 +80,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="386dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="16dp"
-        android:elevation="8dp"
-        android:visibility="visible"
-        app:cardCornerRadius="0dp"
-        app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_img"
-        tools:visibility="visible">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="386dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="76dp"
+            android:elevation="8dp"
+            android:visibility="visible"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_img"
+            tools:visibility="visible">
 
-        <EditText
-            android:id="@+id/review"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="@string/review"
-            android:inputType="textMultiLine"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </androidx.cardview.widget.CardView>
+            <EditText
+                android:id="@+id/review"
+                android:layout_width="355dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/review"
+                android:inputType="textMultiLine"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/rev_btn"
-        android:layout_width="146dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="88dp"
-        android:onClick="enterReview"
-        android:text="@string/rev_btn"
-        android:textColor="#020202"
-        app:cornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        <Button
+            android:id="@+id/rev_btn"
+            android:layout_width="146dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            android:onClick="enterReview"
+            android:text="@string/rev_btn"
+            android:textColor="#020202"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.132"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <Button
-        android:id="@+id/back"
-        android:layout_width="146dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="88dp"
-        android:onClick="go_back"
-        android:text="Back"
-        android:textColor="#020202"
-        app:cornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/rev_btn"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="146dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            android:onClick="go_back"
+            android:text="Back"
+            android:textColor="#020202"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rev_btn"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <ImageView
+        <ImageView
         android:id="@+id/item_img"
         android:layout_width="378dp"
         android:layout_height="175dp"

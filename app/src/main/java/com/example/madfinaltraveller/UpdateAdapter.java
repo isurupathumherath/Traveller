@@ -2,6 +2,7 @@ package com.example.madfinaltraveller;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +60,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
                 EditText uname = view.findViewById(R.id.utxtname);
                 EditText uemail = view.findViewById(R.id.utxtemail);
                 EditText ucontact = view.findViewById(R.id.utxtcontact);
-                EditText uimage = view.findViewById(R.id.utxtimage);
+
                 EditText utype = view.findViewById(R.id.utxttype);
                 EditText ucurrency = view.findViewById(R.id.utxtcurrency);
 
@@ -67,7 +68,7 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
 
                 uname.setText(model.getName());
                 ucontact.setText(model.getContact());
-                uimage.setText(model.getImage());
+
                 uemail.setText(model.getEmail());
                 utype.setText(model.getType());
                 ucurrency.setText(model.getCurrency());
@@ -75,35 +76,54 @@ public class UpdateAdapter extends FirebaseRecyclerAdapter<Guide, UpdateAdapter.
                 dialogPlus.show();
 
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
+                    String emailpattern="[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                     @Override
                     public void onClick(View v) {
-                        Map<String, Object> map =  new HashMap<>();
-                        map.put("name", uname.getText().toString());
-                        map.put("contact", ucontact.getText().toString());
-                        map.put("email", uemail.getText().toString());
-                        map.put("image", uimage.getText().toString());
-                        map.put("type", utype.getText().toString());
-                        map.put("currency", ucurrency.getText().toString());
+                        Map<String, Object> map = new HashMap<>();
+                        if (TextUtils.isEmpty(uname.getText().toString())) {
+                            Toast.makeText(holder.uname.getContext(), "Enter guide name", Toast.LENGTH_SHORT).show();
+                        } else if (TextUtils.isEmpty(ucontact.getText().toString())) {
+                            Toast.makeText(holder.uname.getContext(), "Enter contact number", Toast.LENGTH_SHORT).show();
+                        } else if (TextUtils.isEmpty(uemail.getText().toString())) {
+                            Toast.makeText(holder.uname.getContext(), "Enter email", Toast.LENGTH_SHORT).show();
+                        }else if(!uemail.getText().toString().matches(emailpattern)) {
+                            Toast.makeText(holder.uname.getContext(),"Email Entered is not valid",Toast.LENGTH_SHORT).show();
+                        }
+                        else if (TextUtils.isEmpty(utype.getText().toString())) {
+                            Toast.makeText(holder.uname.getContext(), "Enter guide type", Toast.LENGTH_SHORT).show();
+                        } else if (TextUtils.isEmpty(ucurrency.getText().toString())) {
+                            Toast.makeText(holder.uname.getContext(), "Enter currency", Toast.LENGTH_SHORT).show();
 
-                        FirebaseDatabase.getInstance().getReference().child("Guide")
-                                .child(getRef(position).getKey()).updateChildren(map)
-                                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void unused) {
-                                        Toast.makeText(holder.uname.getContext(), "Updated Successfully", Toast.LENGTH_LONG).show();
-                                        dialogPlus.dismiss();
+                        } else {
 
-                                    }
-                                })
-                                .addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(Exception e) {
-                                        Toast.makeText(holder.uname.getContext(), "Error while updating", Toast.LENGTH_LONG).show();
-                                        dialogPlus.dismiss();
-                                    }
-                                });
+                            map.put("name", uname.getText().toString());
+                            map.put("contact", ucontact.getText().toString());
+                            map.put("email", uemail.getText().toString());
+
+                            map.put("type", utype.getText().toString());
+                            map.put("currency", ucurrency.getText().toString());
+
+                            FirebaseDatabase.getInstance().getReference().child("Guide")
+                                    .child(getRef(position).getKey()).updateChildren(map)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            Toast.makeText(holder.uname.getContext(), "Updated Successfully", Toast.LENGTH_LONG).show();
+                                            dialogPlus.dismiss();
+
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(Exception e) {
+                                            Toast.makeText(holder.uname.getContext(), "Error while updating", Toast.LENGTH_LONG).show();
+                                            dialogPlus.dismiss();
+                                        }
+                                    });
+                        }
                     }
                 });
+
 
 
 

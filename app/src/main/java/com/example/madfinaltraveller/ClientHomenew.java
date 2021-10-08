@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -20,14 +22,16 @@ public class ClientHomenew extends AppCompatActivity implements NavigationView.O
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    String usern;
+    static String usern;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_homenew);
 
         Intent intent=getIntent();
-        usern=intent.getStringExtra("username");
+        usern=intent.getStringExtra("un");
+
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
@@ -42,12 +46,18 @@ public class ClientHomenew extends AppCompatActivity implements NavigationView.O
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void moveprofile(View view){
+        Intent i=new Intent(this,updateUser.class);
+        i.putExtra("un",usern);
+        startActivity(i);
+    }
+
     public void moveGuide(View view){
         Intent i=new Intent(this,MainActivity.class);
         i.putExtra("un",usern);
         startActivity(i);
     }
-//
+    //
     public void showall(View view){
         Intent i=new Intent(this,activity_show_hotel.class);
         i.putExtra("un",usern);
@@ -98,6 +108,9 @@ public class ClientHomenew extends AppCompatActivity implements NavigationView.O
                 startActivity(i1);
                 break;
             case R.id.viewtaxi:
+                Intent i8 = new Intent(this, activity_client_taxi.class);
+                i8.putExtra("un",usern);
+                startActivity(i8);
                 break;
         }
         return true;

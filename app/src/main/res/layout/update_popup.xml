@@ -56,7 +56,8 @@
         android:textColor="@color/black"
         android:background="@drawable/rounded"
         android:layout_gravity="center"
-        android:id="@+id/utxtemail"/>
+        android:id="@+id/utxtemail"
+        android:inputType="textEmailAddress"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -79,7 +80,8 @@
         android:textAlignment="center"
         android:background="@drawable/rounded"
         android:layout_gravity="center"
-        android:id="@+id/utxtcurrency"/>
+        android:id="@+id/utxtcontact"
+        android:inputType="number"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -89,7 +91,9 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:gravity="center"/>
+        android:gravity="center"
+
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -100,7 +104,8 @@
         android:textAlignment="center"
         android:background="@drawable/rounded"
         android:layout_gravity="center"
-        android:id="@+id/utxtcontact"/>
+        android:id="@+id/utxtcurrency"
+        android:inputType="number"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -123,27 +128,9 @@
         android:layout_gravity="center"
         android:id="@+id/utxttype"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Image URL"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:id="@+id/utxtimage"/>
+
+
 
     <Button
         android:layout_width="match_parent"
