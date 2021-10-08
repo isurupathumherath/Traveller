@@ -39,7 +39,7 @@ public class activity_register2 extends AppCompatActivity {
     public void RegisterUser(View view){
         db= FirebaseDatabase.getInstance().getReference().child("User");
         Intent intent=new Intent(this,Loginpage.class);
-
+        String emailpattern="[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         db.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
@@ -52,6 +52,9 @@ public class activity_register2 extends AppCompatActivity {
                     }
                     else if(TextUtils.isEmpty(e_mail.getText().toString())){
                         Toast.makeText(getApplicationContext(),"Enter an Email",Toast.LENGTH_SHORT).show();
+                    }
+                    else if(!e_mail.getText().toString().matches(emailpattern)){
+                        Toast.makeText(getApplicationContext(),"Email Entered is not valid",Toast.LENGTH_SHORT).show();
                     }
                     else if(TextUtils.isEmpty(pass.getText().toString())){
                         Toast.makeText(getApplicationContext(),"Enter a password",Toast.LENGTH_SHORT).show();

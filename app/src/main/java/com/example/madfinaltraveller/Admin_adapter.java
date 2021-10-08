@@ -2,6 +2,7 @@ package com.example.madfinaltraveller;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,30 +95,54 @@ public class Admin_adapter extends FirebaseRecyclerAdapter<TaxiModel,Admin_adapt
                     @Override
                     public void onClick(View view) {
                         Map<String,Object> map=new HashMap<>();
-                        map.put("DriverName",drivername.getText().toString());
-                        map.put("ContactNo",contactno.getText().toString());
-                        map.put("VehicleNo",vehicleno.getText().toString());
-                        map.put("TaxiId",taxiid.getText().toString());
-                        map.put("AvaArea",avaarea.getText().toString());
-                        map.put("PerKm",perkm.getText().toString());
-                        map.put("profURL",profurl.getText().toString());
+                        if(TextUtils.isEmpty(drivername.getText().toString())){
+                            Toast.makeText(holder.drivername.getContext(),"Enter driver name",Toast.LENGTH_SHORT).show();
+                        }
 
-                        FirebaseDatabase.getInstance().getReference().child("Taxiis")
-                                .child(getRef(position).getKey()).updateChildren(map)
-                                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void unused) {
-                                        Toast.makeText(holder.drivername.getContext(), "Details updated successfully", Toast.LENGTH_LONG).show();
-                                        dialogPlus.dismiss();
-                                    }
-                                })
-                                .addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure( Exception e) {
-                                        Toast.makeText(holder.drivername.getContext(), "Error while updating !", Toast.LENGTH_SHORT).show();
-                                        dialogPlus.dismiss();
-                                    }
-                                });
+                         else if(TextUtils.isEmpty(contactno.getText().toString())){
+                            Toast.makeText(holder.drivername.getContext(),"Enter contact number",Toast.LENGTH_SHORT).show();
+                        }
+                        else if(TextUtils.isEmpty(vehicleno.getText().toString())){
+                            Toast.makeText(holder.drivername.getContext(),"Enter vehicle number",Toast.LENGTH_SHORT).show();
+                        }
+                         else if(TextUtils.isEmpty(taxiid.getText().toString())){
+                            Toast.makeText(holder.drivername.getContext(),"Enter taxi id",Toast.LENGTH_SHORT).show();
+                        }
+                        else if(TextUtils.isEmpty(avaarea.getText().toString())){
+                            Toast.makeText(holder.drivername.getContext(),"Enter available area",Toast.LENGTH_SHORT).show();
+                        }
+                        else if(TextUtils.isEmpty(perkm.getText().toString())){
+                            Toast.makeText(holder.drivername.getContext(),"Enter price perKm",Toast.LENGTH_SHORT).show();
+                        }
+                        else if(TextUtils.isEmpty(profurl.getText().toString())){
+                            Toast.makeText(holder.drivername.getContext(),"Enter url",Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            map.put("DriverName", drivername.getText().toString());
+                            map.put("ContactNo", contactno.getText().toString());
+                            map.put("VehicleNo", vehicleno.getText().toString());
+                            map.put("TaxiId", taxiid.getText().toString());
+                            map.put("AvaArea", avaarea.getText().toString());
+                            map.put("PerKm", perkm.getText().toString());
+                            map.put("profURL", profurl.getText().toString());
+
+                            FirebaseDatabase.getInstance().getReference().child("Taxiis")
+                                    .child(getRef(position).getKey()).updateChildren(map)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            Toast.makeText(holder.drivername.getContext(), "Details updated successfully", Toast.LENGTH_LONG).show();
+                                            dialogPlus.dismiss();
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(Exception e) {
+                                            Toast.makeText(holder.drivername.getContext(), "Error while updating !", Toast.LENGTH_SHORT).show();
+                                            dialogPlus.dismiss();
+                                        }
+                                    });
+                        }
 
                     }
                 });

@@ -17,6 +17,10 @@ public class home_admin extends AppCompatActivity {
         setContentView(R.layout.activity_home_admin);
     }
 
+    public void logout(View v){
+        Intent intent = new Intent(this, Loginpage.class);
+        startActivity(intent);
+    }
     public void changeFragment(View view){
         Fragment fragment;
         if (view == findViewById(R.id.guidebtn)){

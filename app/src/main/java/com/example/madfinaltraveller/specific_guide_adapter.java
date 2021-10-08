@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +26,7 @@ public class specific_guide_adapter extends FirebaseRecyclerAdapter<Reviews, spe
 
     protected void onBindViewHolder(@NonNull specific_guide_adapter.myViewHolder holder, int position, @NonNull Reviews model) {
         holder.comment.setText(model.getReview());
+        holder.r1.setRating(Float.parseFloat(model.getRatings()));
 
 
 
@@ -41,11 +43,13 @@ public class specific_guide_adapter extends FirebaseRecyclerAdapter<Reviews, spe
     class myViewHolder extends RecyclerView.ViewHolder{
 
         TextView comment;
+        RatingBar r1;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
             comment = (TextView)itemView.findViewById(R.id.commentText);
+            r1 = (RatingBar)itemView.findViewById(R.id.MyratingBar);
 
         }
 

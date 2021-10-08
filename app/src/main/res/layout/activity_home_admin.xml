@@ -22,7 +22,7 @@
             android:layout_width="53dp"
             android:layout_height="69dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:onClick="changeFragment"
             app:srcCompat="@drawable/place" />
 
@@ -31,7 +31,7 @@
             android:layout_width="53dp"
             android:layout_height="69dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="130dp"
             android:onClick="changeFragment"
             app:srcCompat="@drawable/guide" />
 
@@ -40,7 +40,7 @@
             android:layout_width="53dp"
             android:layout_height="69dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="280dp"
             android:onClick="changeFragment"
             app:srcCompat="@drawable/taxi" />
 
@@ -49,9 +49,18 @@
             android:layout_width="53dp"
             android:layout_height="69dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="550dp"
+            android:layout_marginTop="430dp"
             android:onClick="changeFragment"
             app:srcCompat="@drawable/statistics" />
+
+        <ImageView
+            android:id="@+id/logoutbtn"
+            android:layout_width="53dp"
+            android:layout_height="69dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="590dp"
+            android:onClick="logout"
+            app:srcCompat="@drawable/logout" />
 
 
     </androidx.cardview.widget.CardView>

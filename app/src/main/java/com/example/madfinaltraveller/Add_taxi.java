@@ -57,11 +57,15 @@ public class Add_taxi extends AppCompatActivity {
 
     private void insertData()
     {
+        String MobilePattern = "[0-9]{10}";
         if(TextUtils.isEmpty(drivername.getText().toString())){
             Toast.makeText(getApplicationContext(),"Enter Driver's name",Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(contactno.getText().toString())){
             Toast.makeText(getApplicationContext(),"Enter a contact Number",Toast.LENGTH_SHORT).show();
+        }
+        else if(!contactno.getText().toString().matches(MobilePattern)){
+            Toast.makeText(getApplicationContext()," Given input is not valid",Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(vehicleno.getText().toString())){
             Toast.makeText(getApplicationContext(),"Enter The Vehicle Number",Toast.LENGTH_SHORT).show();

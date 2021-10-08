@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,12 +20,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class activity_guide_review extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    RatingBar r1;
 
     TextView getnames;
     String str,image;
@@ -40,11 +43,21 @@ public class activity_guide_review extends AppCompatActivity implements Navigati
         getnames = (TextView)findViewById(R.id.getname);
         review = (EditText)findViewById(R.id.review);
         img = (ImageView)findViewById(R.id.item_img);
+        r1 = findViewById(R.id.ratingBar);
+
+
         Intent intent = getIntent();
         str = intent.getStringExtra("name");
         image = intent.getStringExtra("image");
         getnames.setText(str);
         newReview = new Reviews();
+
+
+        Picasso.get()
+                .load(image)
+                .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                .error(R.drawable.common_google_signin_btn_icon_dark)
+                .into(img);
 
         drawerLayout=findViewById(R.id.constraint_layout1);
         navigationView=findViewById(R.id.nav_view1);
@@ -72,6 +85,7 @@ public class activity_guide_review extends AppCompatActivity implements Navigati
 
             newReview.setReview(review.getText().toString().trim());
             newReview.setUsername(getnames.getText().toString().trim());
+            newReview.setRatings(String.valueOf(r1.getRating()));
 
             db.push().setValue(newReview);
 

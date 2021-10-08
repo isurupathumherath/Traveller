@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -26,6 +27,7 @@ public class specific_guide_review extends AppCompatActivity implements Navigati
     String str;
     String usern;
 
+
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -38,6 +40,7 @@ public class specific_guide_review extends AppCompatActivity implements Navigati
 
         recyclerView = (RecyclerView)findViewById(R.id.srv);
         tv = (TextView)findViewById(R.id.textView25);
+
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
