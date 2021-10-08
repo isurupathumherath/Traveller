@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".activity_register_hotel">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageHtl"
+        android:layout_width="94dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_launcher_background"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addHotel"
+        tools:ignore="VectorDrawableCompat" />
+
     <TextView
         android:id="@+id/addHotel"
         android:layout_width="wrap_content"
@@ -25,29 +39,30 @@
         android:id="@+id/textHotelDistrict"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/createHotelDistrict"
         android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHotelCity" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toEndOf="@+id/textHotelCity"
+        app:layout_constraintTop_toBottomOf="@+id/editHotelAddress" />
 
     <TextView
         android:id="@+id/textHotelCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:text="@string/createHotelCity"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editHotelAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/textHotelAddress" />
 
     <EditText
         android:id="@+id/editHotelAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
@@ -56,15 +71,15 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHotelAddress" />
+        app:layout_constraintStart_toEndOf="@+id/textHotelAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editHotelType" />
 
     <TextView
         android:id="@+id/textHotelAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="@string/editHotelAddress"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,22 +99,22 @@
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/createHotelName"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addHotel" />
+        app:layout_constraintTop_toBottomOf="@+id/imageHtl" />
 
     <TextView
         android:id="@+id/textHotelLocationTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/createHotelLocationTag"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHotelDistrict" />
+        app:layout_constraintTop_toBottomOf="@+id/editHotelCity" />
 
     <TextView
         android:id="@+id/textHotelService"
@@ -127,7 +142,7 @@
         android:id="@+id/editHotelName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
@@ -135,15 +150,15 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHotelName" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textHotelName"
+        app:layout_constraintTop_toBottomOf="@+id/imageHtl" />
 
     <EditText
         android:id="@+id/editHotelType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
@@ -158,22 +173,21 @@
         android:id="@+id/editHotelCity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="@string/createHotelCity"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textHotelCity"
-        app:layout_constraintTop_toBottomOf="@+id/editHotelAddress" />
+        app:layout_constraintEnd_toStartOf="@+id/editHotelDistrict"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHotelCity" />
 
     <EditText
         android:id="@+id/editHotelDistrict"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
@@ -181,14 +195,14 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textHotelDistrict"
-        app:layout_constraintTop_toBottomOf="@+id/editHotelCity" />
+        app:layout_constraintStart_toEndOf="@+id/editHotelCity"
+        app:layout_constraintTop_toBottomOf="@+id/textHotelDistrict" />
 
     <EditText
         android:id="@+id/editHotelLocationTag"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
@@ -197,14 +211,14 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHotelLocationTag" />
+        app:layout_constraintStart_toEndOf="@+id/textHotelLocationTag"
+        app:layout_constraintTop_toBottomOf="@+id/editHotelDistrict" />
 
     <EditText
         android:id="@+id/editHotelService"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
@@ -213,8 +227,8 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHotelService" />
+        app:layout_constraintStart_toEndOf="@+id/textHotelService"
+        app:layout_constraintTop_toBottomOf="@+id/editHotelLocationTag" />
 
     <Button
         android:id="@+id/btnCancel"
@@ -235,5 +249,15 @@
         android:text="@string/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editHotelService" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/camera" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

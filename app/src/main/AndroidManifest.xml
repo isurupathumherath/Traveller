@@ -14,13 +14,13 @@
             android:exported="true" />
         <activity
             android:name=".activity_client_taxi"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".currency_change"
             android:exported="true" />
         <activity
             android:name=".home_admin"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".specific_guide_review"
             android:exported="true" />
@@ -50,10 +50,10 @@
             android:exported="true" />
         <activity
             android:name=".activity_guide_review"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity_tourist_registration"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity_update_guide"
             android:exported="true" />
@@ -83,7 +83,7 @@
             android:exported="true" />
         <activity
             android:name=".newAdminhome"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Add_taxi"
             android:exported="true" />
