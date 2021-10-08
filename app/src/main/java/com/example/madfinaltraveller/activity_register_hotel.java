@@ -43,9 +43,10 @@ public class activity_register_hotel extends AppCompatActivity {
 
     EditText txtName, txtType, txtAddress, txtCity, txtDistrict, txtProvince, txtLocationURL, txtService;
     Button btnSave;
-    ImageButton imageButton;
     DatabaseReference dbRef;
     Hotel hotel;
+
+    ImageButton imageButton;
     Uri filepath;
     Bitmap bitmap;
     CircleImageView ed_image;
@@ -79,12 +80,12 @@ public class activity_register_hotel extends AppCompatActivity {
 
         imageButton = findViewById(R.id.imageButton);
         ed_image = findViewById(R.id.imageHtl);
+
         btnSave = findViewById(R.id.btnSave);
 
         hotel = new Hotel();
 
         imageButton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
 //                openFileChooser();
@@ -142,8 +143,7 @@ public class activity_register_hotel extends AppCompatActivity {
     public void save() {
 
         if(filepath == null){
-
-            Toast.makeText(this, "Please Select a Profile Image", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Select a Hotel Image", Toast.LENGTH_SHORT).show();
         }else {
             dbRef = FirebaseDatabase.getInstance().getReference().child("Hotel");
 
@@ -169,7 +169,6 @@ public class activity_register_hotel extends AppCompatActivity {
                     final ProgressDialog dialog = new ProgressDialog(this);
                     dialog.setTitle("File Uploader");
                     dialog.show();
-                    System.out.println("Image Uploading");
 
                     FirebaseStorage storage = FirebaseStorage.getInstance();
                     final StorageReference uploader = storage.getReference("ImageHotel" + new Random().nextInt(50));
@@ -177,7 +176,6 @@ public class activity_register_hotel extends AppCompatActivity {
                             .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                    System.out.println("Image Uploading");
                                     uploader.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
                                         public void onSuccess(Uri uri) {

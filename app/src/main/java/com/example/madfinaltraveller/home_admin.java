@@ -21,6 +21,7 @@ public class home_admin extends AppCompatActivity {
         Intent intent = new Intent(this, Loginpage.class);
         startActivity(intent);
     }
+
     public void changeFragment(View view){
         Fragment fragment;
         if (view == findViewById(R.id.guidebtn)){

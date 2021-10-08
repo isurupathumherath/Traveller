@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/drawable/camera.xml" value="0.2203125" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_currency_change.xml" value="0.15185185185185185" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_deluser.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_home_admin.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_hotel_search.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_mian_item_hotel.xml" value="0.20416666666666666" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_register2.xml" value="0.264" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_register_hotel.xml" value="0.264" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_sample_landing_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_show_hotel.xml" value="0.20677083333333332" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_specific_guide_review.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_stat_page_admin.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_tourist_registration.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/activity_update_guide.xml" value="0.264" />
@@ -27,10 +33,13 @@
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/popup_update.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/specific_guide_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/taxi_admin_main.xml" value="0.176" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/update_guide.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/layout/update_popup.xml" value="0.25416666666666665" />
         <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/menu/search.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/menu/searchtaxi.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/menu/side_b.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project Files/Android Studio/Traveller/Traveller/app/src/main/res/menu/sidebar.xml" value="0.25416666666666665" />
         <entry key="..\:/SLIIT/Y2 Sem2/Mobile Application Development/Traveller Latest Files/Travellerrrrrr/Traveller/Traveller/app/src/main/res/layout/activity_client_homenew.xml" value="0.13020833333333334" />
-        <entry key="..\:/SLIIT/Y2 Sem2/Mobile Application Development/Traveller-FINALLLLLLLLLLLLLLL/Traveller/app/src/main/res/layout/update_popup.xml" value="0.2" />
         <entry key="..\:/Users/ACER/Desktop/clone/Traveller/app/src/main/res/layout/activity_client_homenew.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ACER/Desktop/clone/Traveller/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ACER/Desktop/clone/Traveller/app/src/main/res/layout/activity_new_adminhome.xml" value="0.25416666666666665" />
@@ -54,23 +63,11 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.275" />
         <entry key="app/src/main/res/layout/activity_register2.xml" value="0.14361702127659576" />
         <entry key="app/src/main/res/layout/activity_register_hotel.xml" value="0.2617753623188406" />
-        <entry key="app/src/main/res/layout/activity_guide_review.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_home_admin.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_hotel_update_popup.xml" value="0.2617753623188406" />
-        <entry key="app/src/main/res/layout/activity_loginpage.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.275" />
-        <entry key="app/src/main/res/layout/activity_new_adminhome.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_register2.xml" value="0.14361702127659576" />
-        <entry key="app/src/main/res/layout/activity_register_hotel.xml" value="0.2617753623188406" />
-        <entry key="app/src/main/res/layout/activity_sample_landing_page.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_show_hotel.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_specific_guide_review.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/activity_stat_page_admin.xml" value="0.14361702127659576" />
         <entry key="app/src/main/res/layout/activity_tourist_registration.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_update_guide.xml" value="0.275" />
         <entry key="app/src/main/res/layout/client_item.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/fragment_admin_fuide_fragement.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/header.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/item.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/item_taxi.xml" value="0.25" />
         <entry key="app/src/main/res/layout/main_item.xml" value="0.2953125" />
