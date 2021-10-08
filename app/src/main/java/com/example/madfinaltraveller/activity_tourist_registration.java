@@ -166,6 +166,7 @@ public class activity_tourist_registration extends AppCompatActivity {
             final ProgressDialog dialog = new ProgressDialog(this);
             dialog.setTitle("File Uploader");
             dialog.show();
+
             ed_regname = findViewById(R.id.regname);
             ed_regemail = findViewById(R.id.regemail);
             ed_regcontact= findViewById(R.id.regcontact);
